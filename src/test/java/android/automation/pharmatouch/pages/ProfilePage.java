@@ -22,14 +22,14 @@ public class ProfilePage extends BasePage {
     // main menu
     int exit;
     int sync;
-    By allMainMenu = By.xpath("(.//*[@id='main_container'])[*]");
-    By profileButton = By.xpath(String.format("//*[@id='main_container' and ./*[@text='%s']]", Properties.title_main_menu_button_visits));
-    By companyButton = By.xpath(String.format("//*[@id='main_container' and ./*[@text='%s']]", Properties.title_main_menu_button_institutions));
-    By clientButton = By.xpath(String.format("//*[@id='main_container' and ./*[@text='%s']]", Properties.title_main_menu_button_clients));
-    By reportButton = By.xpath(String.format("//*[@id='main_container' and ./*[@text='%s']]", Properties.title_main_menu_button_reports));
-    By clmButton = By.xpath(String.format("//*[@id='main_container' and ./*[@text='%s']]", Properties.title_main_menu_button_presentations));
-    By exitButton = By.xpath(String.format("(.//*[@id='main_container'])[%s]",exit));
-    By syncButton = By.xpath(String.format("(.//*[@id='main_container'])[%s]",sync));
+    By allMainMenu = By.xpath("(//*[contains(@resource-id,'main_container'))[*]");
+    By profileButton = By.xpath(String.format("//*[contains(@resource-id,'main_container') and ./*[@text='%s']]", Properties.title_main_menu_button_visits));
+    By companyButton = By.xpath(String.format("//*[contains(@resource-id,'main_container') and ./*[@text='%s']]", Properties.title_main_menu_button_institutions));
+    By clientButton = By.xpath(String.format("//*[contains(@resource-id,'main_container') and ./*[@text='%s']]", Properties.title_main_menu_button_clients));
+    By reportButton = By.xpath(String.format("//*[contains(@resource-id,'main_container') and ./*[@text='%s']]", Properties.title_main_menu_button_reports));
+    By clmButton = By.xpath(String.format("//*[contains(@resource-id,'main_container') and ./*[@text='%s']]", Properties.title_main_menu_button_presentations));
+    By exitButton = By.xpath(String.format("(//*[contains(@resource-id,'main_container'))[%s]",exit));
+    By syncButton = By.xpath(String.format("(//*[contains(@resource-id,'main_container'))[%s]",sync));
 
     By nextDay = By.id("com.trinetix.pharmatouch:id/imageArowForward");
     By prevDay = By.id("com.trinetix.pharmatouch:id/imageArowBack");
@@ -77,16 +77,19 @@ public class ProfilePage extends BasePage {
     }
 
     public void createNewCompany() {
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(@resource-id,'main_container') and ./*[@text='Учреждения']]")));
-        driver.findElement(By.xpath("//*[contains(@resource-id,'main_container') and ./*[@text='Учреждения']]")).click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(companyButton));
+//        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(@resource-id,'main_container') and ./*[@text='Учреждения']]")));
+        driver.findElement(companyButton).click();
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(@resource-id, 'action_bar_title')]")));
-        driver.findElement(By.xpath("//*[@class='android.view.View' and @enabled='true']")).click();
+        driver.findElement(plusViewButton).click();
+//        driver.findElement(By.xpath("//*[@class='android.view.View' and @enabled='true']")).click();
         driver.findElement(By.xpath("//*[@text='Создать учреждение']")).click();
         driver.findElement(By.xpath("//*[@text='Ок']")).click();
 //        driver.findElement(By.xpath("//*[@text='Название']")).sendKeys("GTFU Pharm");
-        MobileElement temp = (MobileElement) driver.findElement(By.xpath("//*[@text='Название']"));
-        temp.setValue("GTFU Pharm 2");
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Тип учреждения']")));
+        MobileElement companyName = (MobileElement) driver.findElement(By.xpath("//*[@text='Название']"));
+        companyName.setValue("Test Name Pharm");
+        driver.pressKeyCode(AndroidKeyCode.BACK);
+//        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Тип учреждения']")));
         driver.findElement(By.xpath("//*[@text='Тип учреждения']")).click();
         driver.findElement(By.xpath("(//*[contains(@resource-id, 'textName')])[2]")).click();
         driver.findElement(By.xpath("//*[@text='Область']")).click();
@@ -95,7 +98,9 @@ public class ProfilePage extends BasePage {
         driver.findElement(By.xpath("(//*[contains(@resource-id, 'textName')])[1]")).click();
         driver.findElement(By.xpath("//*[@text='Тип улицы']")).click();
         driver.findElement(By.xpath("(//*[contains(@resource-id, 'textName')])[2]")).click();
-        driver.findElement(By.xpath("//*[@text='Улица']")).sendKeys("The Place");
+        MobileElement streetName = (MobileElement) driver.findElement(By.xpath("//*[@text='Улица']"));
+        streetName.setValue("The Place Street");
+//        driver.findElement(By.xpath("//*[@text='Улица']")).sendKeys("The Place");
         driver.pressKeyCode(AndroidKeyCode.BACK);
         driver.findElement(By.xpath("//*[@text='Создать учреждение']")).click();
 //        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Новое учреждение добавлено']")));
