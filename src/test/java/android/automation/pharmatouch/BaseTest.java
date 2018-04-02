@@ -29,7 +29,7 @@ public class BaseTest {
 //        }
 
         driver = DriverSetup.initDriver();
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
         profilePage = new ProfilePage(driver);
 

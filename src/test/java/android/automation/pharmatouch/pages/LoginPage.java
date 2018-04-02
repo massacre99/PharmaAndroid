@@ -3,6 +3,7 @@ package android.automation.pharmatouch.pages;
 import android.automation.pharmatouch.utils.Properties;
 import io.appium.java_client.MobileDriver;
 import io.appium.java_client.TouchAction;
+import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
@@ -18,13 +19,13 @@ public class LoginPage extends BasePage {
     By buttonOkOnIncorrect = By.id("com.trinetix.pharmatouch:id/add_to_visit");
 
 
-    public LoginPage(MobileDriver driver) {
+    public LoginPage(AndroidDriver driver) {
         super(driver);
     }
 
     public LoginPage invalidLogin() throws InterruptedException {
         waitForVisible(login, 3);
-        enterLoginPass(Properties.LOGIN_FALSE, Properties.PASS_FALSE);
+        enterLoginPass(Properties.login_false, Properties.pass_false);
         Assert.assertTrue(driver.findElement(By.className("android.widget.TextView"))
                 .getText().equalsIgnoreCase("Name or password is not correct"));
         driver.findElement(buttonOkOnIncorrect).click();
@@ -41,7 +42,7 @@ public class LoginPage extends BasePage {
     }
 
     public void clearLoginPass() {
-        TouchAction action = new TouchAction((MobileDriver) driver);
+        TouchAction action = new TouchAction((AndroidDriver) driver);
         action.longPress(driver.findElement(login)).perform();
         driver.findElement(login).clear();
         action.longPress(driver.findElement(password)).perform();
@@ -50,7 +51,7 @@ public class LoginPage extends BasePage {
 
     public void validLogin() {
         waitForVisible(login, 3);
-        enterLoginPass(Properties.LOGIN_TRUE, Properties.PASS_TRUE);
+        enterLoginPass(Properties.login_true, Properties.pass_true);
 //        waitForVisibilityOf(By.className("android.widget.LinearLayout"));
 //        waitForClickabilityOf(By.className("android.widget.LinearLayout"));
         waitForVisible(By.id("com.trinetix.pharmatouch:id/button_text"), 300);

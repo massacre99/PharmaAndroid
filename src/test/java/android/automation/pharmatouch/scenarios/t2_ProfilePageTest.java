@@ -10,6 +10,7 @@ public class t2_ProfilePageTest extends BaseTest {
 
     @Test
     public void clickTest() {
-        profilePage.clickDaysMonth();
+//        profilePage.clickDaysMonth();
+        profilePage.createNewCompany();
     }
 }

@@ -1,6 +1,8 @@
 package android.automation.pharmatouch.pages;
 
+import android.automation.pharmatouch.utils.Properties;
 import io.appium.java_client.MobileDriver;
+import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -15,10 +17,20 @@ import java.util.concurrent.TimeUnit;
  * Created by massacre99 on 27.03.2018.
  */
 public class BasePage {
-    protected MobileDriver driver;
+    protected AndroidDriver driver;
+    protected WebDriverWait wait;
+    protected JavascriptExecutor javascriptExecutor;
 
-    public BasePage(MobileDriver driver) {
+    // The same locators
+    By plusViewButton = By.xpath("//*[@class='android.view.View' and @enabled='true']");
+    By editButton = By.xpath("//*[@id='button_edit']");
+
+
+    public BasePage(AndroidDriver driver) {
         this.driver = driver;
+        wait = new WebDriverWait(driver,10);
+        javascriptExecutor = (JavascriptExecutor) driver;
+
     }
 
     protected void waitForClickable(By locator, int waitTime) {

@@ -1,0 +1,1065 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="screen_size">phone</string>
+
+    <string name="app_name">PharmaTouch</string>
+    <string name="action_main">Main activity</string>
+    <string name="version_title">Версия</string>
+    
+    <string name="button_title_add_to_visit">Новый визит</string>
+    <string name="button_title_add">Добавить</string>
+    <string name="button_title_ready">Готово</string>
+    <string name="button_title_now">Сейчас</string>
+    <string name="button_title_close_edit">Закрыть</string>
+    <string name="button_title_cancel">Отмена</string>
+    <string name="button_title_edit">Изменить</string>
+    <string name="button_title_save">Сохранить</string>
+    <string name="button_title_delete">Удалить</string>
+    <string name="button_title_clear">Очистить</string>
+    <string name="button_title_input">Войти</string>
+    <string name="button_title_exit">Выйти</string>
+    <string name="button_title_update">Обновить</string>
+    <string name="button_title_ok">Ок</string>
+    <string name="button_title_yes">Да</string>
+    <string name="button_title_no">Нет</string>
+    <string name="button_title_create">Создать</string>
+    <string name="title_autorization_name">Логин</string>
+    <string name="title_autorization_password">Пароль</string>   
+    
+    <string name="title_client_connected_places">Социальные и административные связи</string>
+    <string name="title_client_additional_workplace">Дополнительное место работы</string>
+    <string name="title_client_contact_info">Контактная информация</string>
+    <string name="title_client_specialization">Детали клиента</string>
+    <string name="text_client_add_phone">Доп. телефон</string>
+    <string name="text_client_address">Адрес</string>
+    <string name="text_client_birthday">Дата рождения</string>
+    <string name="text_client_category">Автоматическая категория</string>
+    <string name="text_category">Категория</string>
+    <string name="text_client_email">Email</string>
+    <string name="text_client_gender">Пол</string>
+    <string name="text_client_patients_num">Пациентооборот</string>
+    <string name="text_client_phone">Телефон</string>
+    <string name="text_client_phone_home">Телефон домашний</string>
+    <string name="text_client_responcible">Ответственный</string>
+    <string name="text_client_spec">Специализация</string>
+    <string name="text_client_type">Тип клиента</string>
+    <string name="text_client_institution_position">Должность</string>
+    <string name="text_client_institution_name">Учреждение</string>
+    <string name="text_client_institution_position_next">Должность</string>
+    <string name="text_client_institution_name_next">Учреждение</string>
+    <string name="text_client_otdel">Отделение</string>
+    <string name="text_client_man">Мужской</string>
+    <string name="text_client_woman">Женский</string>
+    <string name="text_client_isactive">Активный</string>
+    <string name="text_client_id">ID</string>        
+    
+    <string name="text_client_fio">ФИО</string>
+    <string name="text_client_lastname">Фамилия</string>
+    <string name="text_client_firstname">Имя</string>
+    <string name="text_client_middlename">Отчество</string>
+    
+    <string name="title_agensy_connected_places">Связанные учреждения</string>
+    <string name="title_agensy_add_info">Детали учреждения</string>
+    <string name="title_agensy_contact_info">Контактная информация</string>
+    <string name="text_agensy_add_info">Доп. информация</string>
+    <string name="text_agensy_add_phone">Доп. телефон</string>
+    <string name="text_agensy_address">Адрес</string>
+    <string name="text_agensy_category">Категория</string>
+    <string name="text_agensy_email">Email</string>
+    <string name="text_agensy_phone">Телефон</string>
+    <string name="text_agensy_goodsrate">Товарооборот</string>
+    <string name="text_agensy_responcible">Ответственный</string>
+    <string name="text_agensy_site">Сайт</string>
+    <string name="text_agensy_electropage">Сайт</string>
+    <string name="text_agensy_tax_code">Код ЕДРПОУ</string>
+    <string name="text_agensy_type">Тип учреждения</string>
+    <string name="text_agensy_new_type">Тип учреждения</string>
+    <string name="text_agensy_prescriber">Прескрайбер-аптека</string>
+    <string name="text_agensy_main_agency">Главное учреждение</string>
+    <string name="text_agensy_isactive">Активное</string>
+    <string name="text_verification">Статус верификации</string>
+
+    <string name="text_agensy_lpu">ЛПУ:</string>
+    <string name="text_goal">Цель</string>
+    <string name="text_goal_type">Тип закупки</string>
+    <string name="text_goal_state">Статус</string>
+    <string name="text_planned_date">Планируемая дата</string>
+    <string name="text_plan_approved">План утвержденный</string>
+    <string name="text_auction_number">Номер аукциона</string>
+    <string name="text_supplier">Поставщик</string>
+    <string name="text_date">Дата проведения</string>
+    <string name="text_auction_result">Результат аукциона</string>
+    <string name="text_invoice">Закупки</string>
+    <string name="text_invoice_date">Дата накладной</string>
+    <string name="text_invoice_num">Номер накладной</string>
+    <string name="text_invoice_supplies">Поставки:</string>
+    <string name="text_invoice_sum">Сумма:</string>
+    <string name="text_invoice_2">Накладная</string>
+    <string name="text_planned_prep">Препараты</string>
+    
+    <string name="title_main_menu_button_visits">Профиль</string>
+    <string name="title_main_menu_button_clients">Клиенты</string>
+    <string name="title_main_menu_button_institutions">Учреждения</string>
+    <string name="title_main_menu_button_reports">Отчеты</string>
+    <string name="title_main_menu_button_presentations">CLM</string>
+    <string name="title_main_menu_button_dropbox">DropBox</string>
+    <string name="title_main_menu_button_storage">Склад</string>
+    <string name="title_main_menu_button_gasoline_report">Бензин. отчет</string>
+    <string name="title_main_menu_button_gasoline_report_full">Бензиновый отчет</string>
+    <string name="title_main_menu_button_plan">Планирование</string>
+    
+    <string name="title_storage_promo_cnt">Количество:</string>
+    <string name="title_storage_move_date">Дата:</string>
+    <string name="title_storage_move_date1">Обработка:</string>
+    <string name="title_storage_move_cnt1">Получено:</string>
+    <string name="title_storage_move_cnt">Кол-во:</string>
+    <string name="storage_add_move">Добавить расход</string>
+    <string name="storage_move">Перемещение</string>
+    <string name="storage_move_user">Пользователь</string>
+    <string name="storage_move_promo">Промо-материал</string>
+    <string name="storage_move_date">Дата</string>
+    <string name="storage_move_cnt">Количество</string>
+    <string name="storage_move_cnt2">Получено</string>
+    <string name="storage_move_1">Обработка</string>  
+    <string name="storage_move_cnt_on_store">Кол-во на складе</string>  
+    <string name="storage_message_no_cnt">На текущем складе нет нужного количества для перемещения</string>
+    <string name="storage_message_no_cur_user">Нельзя делать перемещение себе</string>  
+    <string name="storage_add_inquiry">Добавить запрос</string>
+    <string name="storage_inquiry_date1">Дата запроса</string>
+    <string name="storage_inquiry_date2">Дата получения</string>
+    <string name="storage_inquiry_descr">Комментарии</string>
+    <string name="storage_inquiry">Запрос</string>
+    <string name="storage_message_no_promos">Добавьте промо-материалы</string>
+    <string name="text_message_delete_inquiry">Запрос удален</string> 
+    <string name="text_message_delete_inquiry_confirmation">Удалить запрос?</string>  
+    
+    
+    <string name="title_saved_filters">Фильтры</string>
+    <string name="text_filters_onlymy">Только мои</string>
+    <string name="text_filters_archive">Архив</string>
+    <string name="title_text_archivereason">Причина архивации</string>
+    <string name="text_message_send_in_archive">Отправлено в архив</string>
+    <string name="text_message_extracted_from_archive">Извлечено из архива</string>
+     
+    <string name="title_main_menu_button_logout">Выход</string>
+    <string name="title_main_menu_button_sync">Синхронизировать</string>
+    <string name="title_sync_for_period_text">Отправка за период</string>
+    <string name="title_sync_datefrom">Начало</string>
+    <string name="title_sync_datetill">Окончание</string>
+    
+    <string name="title_description_main_tab">Карточка</string>
+    <string name="title_download_data_progress_dialog">Выполняется загрузка данных</string>
+    <string name="title_download_apk_progress_dialog">Выполняется загрузка новой версии приложения</string>
+    <string name="title_wait_data_progress_dialog">Ожидание формирования данных</string>
+    <string name="title_sync_progress_dialog">Выполняется синхронизация</string>
+    <string name="title_start_sync_progress_dialog">Подготовка к синхронизации</string>
+    <string name="title_unpack_getted_data_progress_dialog">Распаковка данных</string>
+    <string name="title_file_data_empty_progress_dialog">Данные не найдены или повреждены</string>
+    <string name="title_update_getted_data_progress_dialog">Обновление данных</string>
+    <string name="title_create_package_sync_progress_dialog">Формирование пакета отправки</string>
+    <string name="title_uploading_sync_progress_dialog">Отправка пакета на сервер</string>
+    <string name="title_error_download_update_file_dialog">Ошибка загрузки новой версии, ожидание повторной загрузки</string>
+    <string name="message_error_getting_allpackage">Сервер занят и не может обработать запрос. Попробуйте запустить приложение еще раз через 15 минут. Если проблема повторится, обратитесь в службу технической поддержки</string>
+    <string name="message_error_upload_zip_file">Ошибка отправки данных на сервер. Попробуйте еще раз.</string>
+    <string name="message_error_wifi_connection">Нет подключения к интернету. Пожалуйста, убедитесь, что ваше устройство имеет доступ к сети интернет</string>
+    <string name="message_need_do_update_your_app">На вашем устройстве устаревшая версия приложения. Пока приложение не будет обновлено, работа в нем будет невозможна. Нажмите “Обновить” для установки новой версии</string>
+    <string name="title_error_dialog_download">Ошибка загрузки...</string>
+    <string name="title_dialog_confirmation">Подтверждение...</string>
+    <string name="title_error_dialog">Ошибка...</string>
+    <string name="title_error_dialog_search">Ошибка поиска...</string>
+    <string name="title_dialog_count_promo">Количество</string>
+    <string name="message_dialog_logout">Вы действительно хотите закончить текущую сессию ?</string>
+    <string name="message_dialog_close_edit">При закрытии несохраненные изменения будут потеряны. Продолжить?</string>
+    <string name="message_dialog_istrans">Сохраненное время начала визита - %s. Перезаписать текущим временем?</string>
+    <string name="message_dialog_close_no_visits_to_copy">Отсутствуют визиты или задачи для копирования</string>
+    <string name="message_dialog_close_no_visits_to_move">Отсутствуют визиты или задачи для перемещения</string>
+    <string name="message_dialog_close_no_visits_to_delete">Отсутствуют визиты или задачи для удаления</string>
+    <string name="message_dialog_choose_visits_to_copy">Выберите визиты или задачи</string>
+    <string name="message_dialog_choose_visits_to_delete">Выберите визиты для удаления</string>
+    <string name="message_dialog_error_move">Перенос запрещен</string>
+    <string name="message_dialog_disable_filter_arhive_company">Планирование архивных учреждений запрещено. Отключите фильтр.</string>
+   	<string name="message_dialog_disable_filter_arhive_client">Планирование архивных клиентов запрещено. Отключите фильтр.</string>
+    <string name="message_choose_visits_deleted">Выбранные визиты или задачи удалены</string>
+    <string name="message_dialog_no_drugs_to_add_photo">Отсутствуют препараты для добавления фото</string>
+    <string name="message_cant_save_picture">Невозможно сохранить картинку. В случае повторения ошибки перезагрузите устройство.</string>
+    <string name="message_dialog_choose_cant_change_drugs_photo">Добавить или изменить фото выкладки невозможно</string>
+    <string name="message_error_getting_search_agency">Сотрудники выбранного учреждения не найдены</string>
+    <string name="message_error_not_correct_setting_data">Данные заполнены некорректно</string>
+    <string name="message_error_not_promo_materials">Бренды не выбраны или для указанных брендов отсутствуют промо-материалы.</string>
+    <string name="message_error_not_promo_for_brends">Бренды не выбраны или не установлена промоция</string>
+    <string name="message_error_not_promo_for_brends_with_patalogy">Бренды не выбраны, не установлена промоция или не указаны нозологии</string>
+    <string name="message_error_not__brends">Справочник брендов отсутствует</string>
+    <string name="message_error_no_more_presentations">Вы добавили все доступные презентации</string>
+    <string name="message_error_login_or_pass">Неверно заполнено имя или пароль.</string>
+    <string name="message_error_autorization">Неверно имя или пароль.</string>
+    <string name="message_error_unpack_zip_file">Ошибка распаковки архива. Пожалуйста, свяжитесь со службой поддержки.</string>
+    <string name="message_error_download_file">Ошибка получения файла базы данных. Пожалуйста, проверьте подключение к интернету.</string>
+    <string name="message_error_getting_baseurl">Ошибка получения базовой ссылки. Пожалуйста, проверьте подключение к интернету.</string>
+    <string name="message_error_no_application_to_open">Нет подходящего приложения для открытия файла</string>
+    <string name="message_not_data_for_update_package">Нет данных для обновления</string>
+    <string name="message_not_setting_agency">Не выбрано учреждение</string>
+    <string name="message_not_result_from_search">Соответствий не найдено</string>
+    <string name="message_not_result_search_client">Для выбранного учреждения сотрудники не найдены</string>
+    <string name="message_error_no_empoyees">Для выбранного учреждения сотрудники не найдены</string>
+    <string name="message_error_fill_line">Заполните все поля %s</string>
+    <string name="message_exist_slow_connection">Обнаружено низкоскоростное подключение к интернету. Хотите продолжить?</string>
+    <string name="message_copy_to_clipboard">Значение поля "%1$s" скопированно в буфер</string>
+    <string name="message_error_run_report">Невозможно загрузить отчет</string>
+    <string name="message_not_edit_this_task">Из этого визита была вызвана история взаимоотношений.</string>
+    <string name="message_not_edit_tasks">Из истории взаимоотношений возможен только просмотр визитов.</string>
+    <string name="message_dialog_only_in_outlets_reason">Из раздела учереждения возможно планирование только в торговые точки.</string>
+   
+    <string name="title_new_client">Новый клиент</string>
+    <string name="title_update_client">Изменение клиента</string>
+    <string name="button_title_create_client">Создать клиента</string>
+    <string name="text_admin_conn">Административные связи</string>
+    <string name="text_soc_conn">Социальные связи</string>
+    <string name="text_prescr_pharmacy">Прескрабер-аптека</string>
+    <string name="text_add_dop_spec">+ Добавить доп. специализацию</string>
+    <string name="text_add_workplace">+ Добавить доп. место работы</string>
+    <string name="text_add_admin_conn">+ Добавить админ. связь</string>
+    <string name="text_add_soc_conn">+ Добавить соц. связь</string>
+    <string name="text_add_prescr_pharmacy">+ Добавить аптеку</string>
+    <string name="text_add_agensy">+ Добавить учреждение</string>
+    
+    <string name="button_title_add_owner">Добавить ответственного</string>
+    <string name="title_edit_owner">Редактировать отв.</string>
+    <string name="title_add_owner">Добавить отв.</string>
+    <string name="title_owner">Пользователь</string>
+    <string name="title_owner_multiplicity">Кратность</string>
+    <string name="title_owner_ismust">Мой клиент</string>
+    <string name="text_message_empty_owner">Заполните поле: Пользователь </string>
+    <string name="text_message_delete_owner">Ответственный  удален</string>
+    <string name="title_owner_ismust1">Мой клиент:</string>
+    <string name="title_owner_multiplicity1">Кратность:</string>
+    
+    <string name="text_message_add_new_clien">Новый клиент добавлен</string>
+    <string name="text_message_add_new_company">Новое учреждение добавлено</string>
+    <string name="text_message_update_company">Учреждение изменено</string>
+    <string name="text_message_update_client">Клиент изменен</string>
+    <string name="title_sys_additional_dist">Дополнительные поля</string>
+    
+    
+    <string name="title_new_agensy">Новое учреждение</string>
+    <string name="title_update_agensy">Изменение учреждения</string>
+    <string name="button_title_create_agensy">Создать учреждение</string>
+    <string name="text_agensy_name">Название</string>
+    
+    <string name="address_part_region">Область</string>
+    <string name="address_part_city">Город / Нас. пункт</string>
+    <string name="add_address_part_city">+ Добавить Город / Нас. пункт</string>
+    <string name="address_part_street_type">Тип улицы</string>
+    <string name="address_part_street">Улица</string>
+    <string name="address_part_building">Дом</string>
+    <string name="address_part_post_code">Почтовый индекс</string>
+    <string name="address_part_adress_add_info">Доп. информация</string>
+    
+    <string name="title_next_visit">Следующий визит</string>
+
+    <string name="title_new_visit">Новый визит</string>
+    <string name="title_update_visit">Изменение визита</string>
+    <string name="title_new_task">Новая задача</string>
+    <string name="button_title_create_visit">Создать визит</string>
+    <string name="title_visit_state">Состояние визита</string>
+    <string name="title_visit_agency_and_client">Учреждение и клиент</string>
+    <string name="title_type_and_contacts">Тип визита и участники</string>
+    <string name="title_visit_date_and_type">Дата и тип</string>
+    <string name="title_visit_date_from">Начало визита</string>
+    <string name="title_visit_date_till">Окончание визита</string>
+    <string name="title_visit_time_from">Время начала визита</string>
+    <string name="title_visit_time_till">Время окончания визита</string>
+    <string name="title_visit_promo">Бренды и промо-материалы</string>
+    <string name="title_visit_brends">Бренды</string>
+    <string name="title_visit_brends_list">Список брендов</string>
+    <string name="title_visit_preps_list">Список препаратов</string>
+    <string name="title_visit_brend">Бренд</string>
+    <string name="title_visit_line">Линия</string>
+    <string name="title_visit_promociya">Промоция</string>
+    <string name="title_visit_photo">Фото</string>
+    <string name="title_visit_subject">Темы визита</string>
+    <string name="title_visit_add_subject">+Добавить тему визита</string>
+    <string name="title_visit_subjs">Темы</string>
+    <string name="title_visit_dogovor">Договоренность</string>
+    <string name="title_visit_dogovor_r">Активность</string>
+    <string name="title_visit_empty">Нет отчетности</string>
+    <string name="title_visit_pervostolniki">Первостольники</string>
+    <string name="title_visit_tests">Анкета ДВ</string>
+    <string name="title_visit_goals">Цели ДВ</string>
+    <string name="title_visit_company_goals">Цели</string>
+    <string name="title_visit_rival_preps">Конкуренты</string>
+    <string name="title_visit_rival_preps_price">Цена</string>
+    <string name="title_visit_rival_preps_isavailable">Наличие</string>
+    <string name="title_visit_action">Акция</string>
+    <string name="title_visit_actions">Акции</string>
+    <string name="title_visit_promo_materials">Промо-материалы</string>
+    <string name="title_visit_promo_materials_list">Список промо-материалов</string>
+    <string name="title_visit_promo_materials_amount">Сумма:</string>
+    <string name="title_visit_promo_materials_num">Чек:</string>
+    <string name="title_visit_adding_materials">Дополнительные материалы</string>
+    <string name="title_visit_present_materials">CLM</string>
+    <string name="title_visit_reports">Отчетность</string>
+    <string name="title_visit_control">Контроль</string>
+    <string name="title_visit_contact_in_task">Участники</string>
+    <string name="add_new_contact_in_task">+ Добавить участников</string>
+    <string name="title_visit_prmo_control">Планограмма</string>
+    <string name="title_visit_control_preparate">Контроль</string>
+    <string name="title_visit_control_preparate_title">Препарат</string>
+    <string name="title_visit_control_preparate_normrest">Рекомендованный ТЗ</string>
+    <string name="title_visit_control_preparate_plan">План</string>
+    <string name="title_visit_control_preparate_potential_gmp">Потенциал GMP</string>
+    <string name="title_visit_control_preparate_sale_plan">Продажи план</string>
+    <string name="title_visit_control_preparate_agr_plan">План назначений</string>
+    <string name="title_visit_control_preparate_agr_fact">Факт назначений</string>
+    <string name="title_visit_control_preparate_delta">Отклонение от плана</string>
+    <string name="title_visit_day">День</string>
+    <string name="title_visit_week">Неделя</string>
+    <string name="title_visit_month">Месяц</string>
+    <string name="title_visit_visit">Визит</string>
+    <string name="title_visit_old_visit">Пред. визит</string>
+    <string name="title_visit_task">Задача</string>
+    <string name="title_visit_plan">План цикла</string>
+    <string name="title_visit_potential">Потенциал</string>
+    <string name="title_visit_potential_1">Потенциал:</string>
+    <string name="title_visit_plancount">План. назначения</string>
+    <string name="title_visit_plancount_1">Раскрытие:</string>
+    <string name="title_visit_factcount">Факт. назначения</string>   
+    <string name="title_visit_client">Клиент</string>
+    <string name="title_visit_visittype">Тип визита</string>
+    <string name="title_visit_supervisor">Супервайзер</string>
+    <string name="title_visit_supervisor_1">Сотрудник</string>
+    <string name="title_visit_add_warcher">+ Добавить наблюдателя</string>
+    <string name="title_visit_warchers">Наблюдатели</string>
+    <string name="title_visit_setted">Указано</string>
+    <string name="title_visit_not_setted">Не указано</string>
+    <string name="title_visit_count_party">К-во участников</string>
+    <string name="title_visit_control_column_prev"> (пред.)</string>
+    <string name="title_visit_count_part">Кол-во участников</string>
+    <string name="button_title_add_to_brend">+ Добавить бренд</string>
+    <string name="button_title_add_to_promo">+ Добавить</string>
+    <string name="button_title_add_to_prep">+ Добавить препарат</string>
+    <string name="button_title_add_to_present">+ Добавить CLM</string>
+   	<string name="text_message_add_new_visit">Новый визит добавлен</string>
+    <string name="text_message_update_visit">Визит изменен</string>
+    <string name="text_message_remove_visit">Визит удален</string>
+    <string name="text_message_plan_not_exists">План цикла не указан</string>
+    <string name="text_message_title_gps_setting">GPS установки</string>
+    <string name="text_message_gps_setting">GPS выключен. Вы хотите переместиться в меню?</string>
+    <string name="text_message_not_update_this_visit">Изменить данный визит невозможно</string>
+    <string name="text_message_not_remove_this_visit">Удалить данный визит невозможно</string>
+    <string name="text_message_not_adding_promo_visit">Вы добавили все доступные промо-материалы</string>
+    <string name="text_message_not_adding_prep_visit">Вы добавили все доступные препараты</string>
+     <string name="text_message_remove_visit_confirmation">Вы действительно хотите удалить данный визит?</string>
+     <string name="text_message_begin_need_set_field_from_control">Не заполнено поле </string>
+     <string name="text_message_end_need_set_field_from_control">в Контроле</string>
+     <string name="text_message_error_setting_date">Время откорректировано в пределах рабочего графика</string>
+     <string name="text_message_not_remove_visits">На текущей неделе удаления запрещены</string>
+     <string name="text_message_not_remove_visits_day">На текущий день удаления запрещены</string>
+    <string name="text_message_not_remove_visits_1">Удаления запрещены</string>
+     <string name="title_visit_sale_plan">По клиентское планирование:</string>
+     <string name="title_tests_comment">Выберите комментарий</string>
+    <string name="text_message_close_visit_confirmation">Вы действительно хотите закрыть визит со статусом</string>
+      
+    
+    <string name="text_visit_no_contact">Клиент не указан</string>
+    <string name="text_day_calendar_today">Сегодня</string>
+    <string name="text_day_calendar_copy_day">Копировать день</string>
+    <string name="text_day_calendar_copy">Копировать</string>
+    <string name="text_day_calendar_move">Переместить</string>
+    <string name="text_day_calendar_select_all">Выбрать все</string>
+    <string name="text_day_calendar_unselect_all">Снять выбор</string>
+    <string name="text_day_calendar_choose_day">Выбрать день</string>
+    <string name="text_radio_same_time">Добавить визит на то же время</string>
+    <string name="text_radio_overwrite">Копировать визит с заменой</string>
+    <string name="text_radio_skip">Не копировать визит</string>
+    
+    <string name="value_is_not_specified">Не указано</string>
+    <string name="one_field_is_not_filled_properly">Некоторые поля заполнены неправильно</string>
+    
+    <string name="genderMens">Мужской</string>
+    <string name="genderWomens">Женский</string>
+
+    <string name="title_task_task">Задача</string>
+    <string name="title_task_state">Состояние задачи</string>
+    <string name="title_task_type">Тип задачи</string>
+    <string name="title_task_date_and_type">Дата и тип</string>
+    <string name="title_task_date_from">Начало задачи</string>
+    <string name="title_task_date_till">Окончание задачи</string>
+    <string name="title_task_comment">Комментарии</string>
+    <string name="title_task_agency_and_address">Учреждение и адрес</string>
+    <string name="title_task_name_and_type">Название и тип</string>
+    <string name="button_title_create_task">Создать задачу</string>
+    <string name="text_task_name">Название</string>
+    <string name="title_update_task">Изменение задачи</string>
+    <string name="text_message_add_new_task">Новая задача добавлена</string>
+    <string name="text_message_update_task">Задача изменена</string>
+    <string name="text_message_remove_task">Задача удалена</string>
+    <string name="text_message_remove_task_confirmation">Вы действительно хотите удалить данную задачу?</string>
+    <string name="text_message_not_remove_this_task">Удалить данную задачу невозможно</string>
+    <string name="text_message_not_update_this_task">Изменить данную задачу невозможно</string>
+    
+    <string name="dpdSetDate">Установить</string>
+    <string name="dpdClearDate">Очистить</string>
+    
+    <string name="title_copy_visits">Копирование визитов</string>
+    
+    <string name="visits">Визиты</string>
+    
+    <string name="button_title_show_presentation">Показать</string>
+    
+    <string name="visit_list_client_title">Клиент:</string>
+    <string name="visit_list_company_title">Учреждение:</string>
+    <string name="visit_list_visit_type_title">Тип визита:</string>
+    <string name="visit_list_resp_title">Исполнитель:</string>
+    <string name="text_client_not_set">Не указан</string>
+    <string name="no_results">Нет результатов</string>
+    <string name="monday">Понедельник</string>
+    <string name="tuesday">Вторник</string>
+    <string name="wednesday">Среда</string>
+    <string name="thursday">Четверг</string>
+    <string name="friday">Пятница</string>
+    <string name="saturday">Суббота</string>
+    <string name="sunday">Воскресенье</string>
+    
+    <string name="title_select_filter">Выберите фильтр</string>
+    <string name="text_message_no_report_filters">Список фильтров пуст</string>
+    <string name="title_add_subject">+Добавить</string>
+    <string name="title_date_from">С числа:</string>
+    <string name="title_date_to">По число:</string>
+    
+    <string name="title_text_sum">Общий итог ДВ, сумма в баллах:</string>
+    <string name="title_test_knowledge">Знания/навыки, которые следует совершенствовать (перечислить три приоритетных для изучения/совершенствования)</string>
+    <string name="title_test_add_knowledge">+Добавить знание/навык</string>
+    <string name="title_test_task_from_manager">Конкретное задание от менеджера для МП по изучению/совершенствованию навыков</string>
+    <string name="title_test_manager_action">Действия менеджера</string>
+    <string name="title_test_data_finish_of_tasks">Сроки исполнения рекомендаций/заданий МП</string>
+    <string name="message_dialog_choose_knowledges_max">Максимальное количество знаний/навыков =</string>
+    
+    <string name="no_clm">Нет файлов для отображения</string>
+    <string name="no_reports">Нет отчетов для отображения</string>
+    <string name="message_selected_wrong_file">Выбранный файл не является изображением</string>
+    
+	<string name="cancel">Отмена</string>
+	<string name="title_organogram">Органограмма</string>
+	<string name="title_responsible">Исполнитель</string>
+	<string name="from_to_date" formatted="false">с %2d.%02d.%d на %2d.%02d.%d</string>
+	<string name="copied_visits_cnt">"Скопировано: "</string>
+    <string name="moved_visits_cnt">"Перемещено"</string>
+	<string name="cvisits_cnt">"Скопировано: "</string>
+	<string name="from_to_date_copy" formatted="false">с %2d.%02d.%d на %2d.%02d.%d</string>
+	<string name="intersection_text" formatted="false">"%d:%02d-%d:%02d, %d.%02d.%4d \nвизит %s \nсовпадает с: "</string>
+	<string name="chooser_text">Выбор источника</string>
+	<string name="text_category_client_adapter">", Категория: "</string>
+    <string name="text_worker_last_visit">"Последний визит: "</string>
+	<string name="control_dlg_bittner" formatted="false">План: %.2f Руб. Заказ: %.2f Руб. Осталось продать: %.2f Руб.</string>
+	<string name="sum_int2_text" formatted="false">Закупка в грн. итог: %.2f грн.</string>
+	
+	<string-array name="monthes">
+		<item >"Январь "</item>
+		<item >"Февраль "</item>
+		<item >"Март "</item>
+		<item >"Апрель "</item>
+		<item >"Май "</item>
+		<item >"Июнь "</item>
+		<item >"Июль "</item>
+		<item >"Август "</item>
+		<item >"Сентябрь "</item>
+		<item >"Октябрь "</item>
+		<item >"Ноябрь "</item>
+		<item >"Декабрь "</item>		
+	</string-array>
+	<string name="text_exit_from_application">Нажмите еще раз для выхода</string>
+	
+	<string-array name="monthes_1">
+		<item >января</item>
+		<item >февраля</item>
+		<item >марта</item>
+		<item >апреля</item>
+		<item >мая</item>
+		<item >июня</item>
+		<item >июля</item>
+		<item >августа</item>
+		<item >сентября</item>
+		<item >октября</item>
+		<item >ноября</item>
+		<item >декабря</item>			
+	</string-array>
+
+	<string name="visit_type_pharmacy">Аптека</string>
+	<string name="visit_type_doctor">Врач</string>
+
+	<string-array name="monthes_short">	   
+		<item >янв</item>
+		<item >фев</item>
+		<item >мар</item>
+		<item >апр</item>
+		<item >мая</item>
+		<item >июн</item>
+		<item >июл</item>
+		<item >авг</item>
+		<item >сен</item>
+		<item >окт</item>
+		<item >ноя</item>
+		<item >дек</item>	
+	</string-array>
+	
+	<string name="sun">Вс</string>
+	<string name="mon">Пн</string>
+	<string name="tue">Вт</string>
+	<string name="wen">Ср</string>
+	<string name="thu">Чт</string>
+	<string name="fri">Пт</string>
+	<string name="sat">Сб</string>
+	
+	<string-array name="days_short">	      
+		<item >@string/sun</item>
+		<item >@string/mon</item>
+		<item >@string/tue</item>
+		<item >@string/wen</item>
+		<item >@string/thu</item>
+		<item >@string/fri</item>
+		<item >@string/sat</item>	
+	</string-array>
+	
+	<string-array name="days_short_mon_first">	      		
+		<item >@string/mon</item>
+		<item >@string/tue</item>
+		<item >@string/wen</item>
+		<item >@string/thu</item>
+		<item >@string/fri</item>
+		<item >@string/sat</item>	
+		<item >@string/sun</item>
+	</string-array>
+	
+	<string-array name="verificaton">	
+	    <item >Не указанно</item>      
+		<item >Ожидает верификацию</item>
+		<item >Отправлено на верификацию</item>
+		<item >Верифицировано</item>
+		<item >Отклонено</item>
+		<item >Требует повторной верификации</item>
+		<item >Не подлежит верификации</item>			
+	</string-array>
+
+	<string name="message_cant_load_html">Ошибка загрузки</string>
+	<string name="message_dialog_get_coords">Пожалуйста, находитесь на месте. Приложение старается снять наиболее точную координату</string>   
+	<string name="message_cant_get_current_coords">Ошибка получения координат. Попробуйте позже</string>
+	<string name="message_get_current_coords_done">Координаты получены</string>
+    <string name="message_get_current_coords_visit">Координаты визита перезаписаны</string>
+	<string name="message_gps_disabled">Для продолжения необходимо включить GPS. Перейти к настройкам и включить GPS?</string>
+	<string name="message_set_min_promo_brend">Необходимо минимум %1$d бренд(ов) промоции</string>
+    <string name="message_enter_loyalty">Заполните %1$s в договоренностях</string>
+    <string name="message_work_started">Работа начата</string>
+    <string name="message_work_not_started_with_no_coord">Работа не начата. Координаты не записаны</string>
+    <string name="message_work_finished">Работа завершена</string>
+    <string name="message_work_not_finished_with_no_coord">Работа не завершена. Координаты не записаны</string>
+	
+	<string name="message_dialog_only_active_company_reason">Возможно планирование только активных учреждений.</string>
+	<string name="message_dialog_only_active_client_reason">Возможно планирование только активных клиентов.</string>
+	
+	<string name="title_visit_distance">Дистанция (м)</string>
+	<string name="value_no_company_coords_visit_distance">Нет коорд. уч.</string>
+	
+	<string name="text_agensy_suburb">Район нас. пункта</string>
+	<string name="title_agensy_suburb">Район населенного пункта</string>
+	<string name="message_suburb_error">Введите район населенного пункта и нажмите \"Создать\" или выберите из списка</string>
+	<string name="title_presentation">Презентация</string>
+	
+	<string name="message_dialog_only_no_alien_company">Возможно планирование только своих учреждений.</string>
+	<string name="message_dialog_only_no_alien_clients">Возможно планирование только своих клиентов.</string>
+	
+	<string name="title_result">Результат</string>
+	<string name="title_visit_last_result">Результат прошлого визита</string>
+
+    <string name="title_sale_kam">План-факт продаж КАМ</string>
+    <string name="title_plan_OTC">План ОТС</string>
+    <string name="title_fact_OTC">Факт ОТС</string>
+    <string name="title_prcnt_OTC">Процент выполнения ОТС</string>
+    <string name="title_plan_Rx">План Rx</string>
+    <string name="title_fact_Rx">Факт Rx</string>
+    <string name="title_prcnt_Rx">Процент выполнения Rx</string>
+
+    <!-- Не локализировать!!! ################################################################################################# -->
+
+	<string name="company_history_field_name">Название</string>
+	<string name="company_history_field_index">Индекс</string>
+	<string name="company_history_field_street">Улица</string>
+	<string name="company_history_field_house">Дом</string>
+	<string name="company_history_field_phone1">Телефон1</string>
+	<string name="company_history_field_phone2">Телефон2</string>
+	<string name="company_history_field_company_type">Тип учреждения</string>
+	<string name="company_history_field_archive_reason">Причина архивации</string>
+	<string name="company_history_field_city">Населенный пункт</string>
+	
+	<string name="client_history_field_lastname">Фамилия</string>
+	<string name="client_history_field_firstname">Имя</string>
+	<string name="client_history_field_middlename">Отчество</string>
+	<string name="client_history_field_company">Учреждение</string>
+	<string name="client_history_field_spec">Специализация</string>	
+	<string name="client_history_field_archive_reason">Причина архивации</string>
+	<string name="client_history_field_position">Должность</string>
+
+    <!-- ######################################################################################################################## -->
+
+	<string name="title_error_device_not_support">Это устройство не поддерживается</string>
+	<string name="ticker_user_have_notification_mess">Важное сообщение для Вас</string>
+	<string name="title_user_have_notification_mess">Нажмите, чтобы прочитать</string>
+	<string name="title_mess_with_number">Сообщение №</string>
+
+    <string name="root">Корневая</string>
+    <string name="message_error_sync_dropbox_file">Ошибка синхронизации файла.</string>
+    <string name="message_file_version_is_old">Устаревшая версия файла</string>
+    <string name="message_version_file_var_is_old">Устаревшая версия файла \"%1$s\"</string>
+    <string name="dropbox_sync_file">Синхронизировать</string>
+    <string name="dropbox_open_file">Открыть</string>
+    <string name="message_is_sync_file_ask">Синхронизировать файл?</string>
+    <string name="message_is_sync_file_var_ask">Синхронизировать файл \"%1$s\"?</string>
+    <string name="message_no_internet_connection">Нет интернет соединения</string>
+    <string name="dropbox_folder_is_empty">Каталог пуст</string>
+	
+	<string name="text_have_questions_contact">Есть вопросы? Обратитесь в</string>
+	<string name="text_technical_support">техническую поддержку.</string>
+	<string name="text_no_active_app">Отсутствуют соответствующие приложения</string>
+
+    <string name="notification">уведомление</string>
+    <plurals name="you_have_var_notifications">
+        <item quantity="one">У вас есть одно уведомление.</item>
+        <item quantity="few">У вас есть %d уведомления.</item>
+        <item quantity="many">У вас есть %d уведомлений.</item>
+    </plurals>
+	
+	<string name="message_enter_red_fields">Заполните поля выделенные красным</string>
+    <string name="text_calendar">Календарь</string>
+    <string name="widget_text_user_sign_in_error">Вы не авторизованы</string>
+    <string name="user_profile">Мой профиль</string>
+    <string name="add_photo">Добавить фото</string>
+    <string name="userprofile_title_statistic">Статистика</string>
+    <string name="user_profile_edit">Редактировать мой профиль</string>
+    <string name="select_image_file">Выбрать изображение</string>
+    <string name="text_userprofile_statistic_count_all_visits">Количество визитов</string>
+    <string name="text_userprofile_statistic_count_max_visits_in_month">Наибольшее количество визитов за месяц</string>
+    <string name="text_userprofile_statistic_length_of_work">Стаж работы</string>
+
+    <plurals name="numberOfPeriodYear">
+        <item quantity="one">%d год</item>
+        <item quantity="few">%d года</item>
+        <item quantity="other">%d лет</item>
+    </plurals>
+
+    <plurals name="numberOfPeriodMonth">
+        <item quantity="one">%d месяц</item>
+        <item quantity="few">%d месяца</item>
+        <item quantity="other">%d месяцев</item>
+    </plurals>
+
+    <plurals name="numberOfPeriodDays">
+        <item quantity="one">%d день</item>
+        <item quantity="few">%d дня</item>
+        <item quantity="other">%d дней</item>
+    </plurals>
+
+    <string name="title_agreements_loyalty">Лояльность</string>
+    <string name="text_message_not_remove_visits_previous_days">На предыдущие дни удаления запрещены</string>
+    <string name="shtuk">шт.</string>
+    <string name="title_day_statistics">Статистика дня</string>
+    <string name="tasks">Задачи</string>
+    <string name="title_error_cant_add_promo_more_storage">Вы не можете списать больше промо-материалов, чем у Вас есть на складе</string>
+    <string name="message_is_not_enough_promomaterials">Недостаточно промо-материалов. Кол-во было отредактировано.</string>
+    <string name="text_message_not_update_date_this_visit">Изменить дату данного визита невозможно</string>
+
+    <string name="title_planing_next_visit">Следующий визит не планируется</string>
+    <string name="button_title_skeep">Пропустить</string>
+    <string name="last_sync">Последняя синхронизация</string>
+
+    <string name="title_gasoline_report">Карточка отчета месячного пробега и ГСМ</string>
+    <string name="text_gasoline_report_car">Автомобиль</string>
+    <string name="text_gasoline_report_driver">Водитель</string>
+    <string name="text_gasoline_report_for">Отчет по пробегу за</string>
+    <string name="text_gasoline_report_for_small">Отчет за</string>
+    <string name="text_gasoline_report_mileage_figures">Показатели одометра</string>
+    <string name="text_gasoline_report_last">Предыдущий отчет</string>
+    <string name="text_gasoline_report_current">Текущий отчет</string>
+    <string name="text_gasoline_report_run_period">Пробег за период</string>
+    <string name="title_gasoline_wrong_enter_report" formatted="false">Заполнение отчета разрешено только с %d до %d</string>
+    <string name="title_has_gasoline_report">Бензиновый отчет уже заполнен</string>
+    <string name="text_gasoline_foto">Фото показателей одометра</string>
+    <string name="text_gasoline_foto_not_found">Фото показателей одометра отсутствует</string>
+    <string name="title_gasoline_current_report_not_entered">Введите текущий отчет</string>
+    <string name="title_gasoline_current_report_error">Пробег за период не может быть отрицательным</string>
+    <string name="title_gasoline_current_photo_error">Сделайте фото одометра</string>
+    <string name="text_gasoline_report_fuel_rest">Остаток топлива (л)</string>
+    <string name="title_gasoline_fuel_rest_not_entered">Введите остаток топлива</string>
+
+    <string name="title_task_comment_guide">Комментарий руководства</string>
+    <string name="title_brend_key_message">Ключевое сообщение</string>
+
+    <string name="ticker_tracker_notification_mess">PharmaTouch Трекер</string>
+	<string name="title_tracker_notification_mess">Трекер запущен и работает</string>
+	
+    <string name="title_visit_client_supervisors_pharmacy">Заведующий(-ая) аптекой</string>
+    <string name="time_was_translated">Время было переведено!</string>
+    <string name="ondevice_translated_time">На вашем устройстве было переведено время.</string>
+    <string name="message_please_check_time">Проверьте пожалуйста точность установленного времени на устройстве.</string>
+    <string name="message_filter_or_sort_error">Ошибка фильтра или сортировки</string>
+    <string name="title_dialog_message_dont_show_again">Не показывать больше</string>
+
+    <string name="title_visit_themes">Темы</string>
+	<string name="button_title_add_to_theme">+ Добавить тему</string>
+	<string name="title_add_visit_theme">Выбор темы</string>
+	<string name="title_visit_theme">Тема</string>
+	<string name="title_visit_theme_mark">Оценка</string>
+	<string name="message_error_fill_mark">Заполните все поля Оценка</string>
+    <string name="title_message_theme">Тема:</string>
+    
+    <string name="title_visit_control_sales_planning">Продажи</string>
+    <string name="profile_has_changes_save_them_">Профиль имеет изменения. Сохранить их?</string>
+    <string name="button_title_save_and_exit">Сохранить и выйти</string>
+    <string name="title_reporting">Отчетность</string>
+    <string name="button_title_add_question">+ Добавить вопрос</string>
+    <string name="button_title_add_goal">+ Добавить цель</string>
+    <string name="map_of_development">Карта развития</string>
+    <string name="medical_representatives">Мед. представитель</string>
+    <string name="title_day_sellplane">План-Факт продаж</string>
+    <string name="planfact_all">Общий</string>
+    <string name="planfact_my">Мой</string>
+    <string name="planfact_sale">План-Факт продаж</string>
+    <string name="message_error_fill_answers">Заполните ответы</string>
+    <string name="title_visit_sended">Отправлено</string>
+    <string name="message_error_not_asks">Список вопросов пуст</string>
+    <string name="title_questions_list">Список вопросов</string>
+    <string name="title_tender_list">Тендерный список</string>
+    <string name="message_error_fill_count">Заполните все поля количество</string>
+    <string name="title_goals_list">Список целей</string>
+    <string name="message_error_no_goals">Список целей пуст</string>
+    <string name="title_kam_agreement">Договоренность КАМ</string>
+    <string name="mp_count">Количество МП:</string>
+    <string name="without_department">Без отделения</string>
+    <string name="text_add_project">+ Добавить проект</string>
+    <string name="text_projects">Проекты</string>
+    <string name="text_project">Проект</string>
+    <string name="previously">Предварительно</string>
+    <string name="order">Заказ</string>
+    <string name="suggested">Отдан</string>
+    <string name="promotion_gift">Поощрение</string>
+    <string name="message_error_set_department">Укажите отделение у клиента</string>
+    <string name="sum_promo_cost_limit" formatted="false">Сумма: %.2f грн.</string>
+    <string name="present_limit_exceed">Подарок не может быть оставлен, так как превышен лимит</string>
+
+    <string name="title_activity_clmmap">Карты</string>
+    <string name="title_activity_clmmap_slide">Слайды</string>
+    <string name="title_activity_clmmap_slide_select">Выбор слайда</string>
+    <string name="text_message_exit_witout_enter_clmmap_name">Вы не ввели название карты. Карта будет удалена</string>
+    <string name="text_message_delete_current_clmmap">Вы действительно хотите удалить текущую карту?</string>
+    <string name="undo">Undo</string>
+    <string name="common_signin_button_text">Войти</string>
+    <string name="title_sync_background_progress_dialog">На данный момент осуществляется отсылка данных на сервер в фоне. Нажмите кнопку синхронизации позже.</string>
+    <string name="title_sync_forbidden">На вашем устройстве менее 100 МБ свободного места. Синхронизация невозможна.</string>
+    <string name="no_projects_for_this_company">Для этой компании пока нет проектов</string>
+    <string name="no_actions_for_this_company">Для этой компании пока нет акций</string>
+    <string name="prohibited_planning_visits_one_time">Запрещено планирование визитов на одно и то же время</string>
+    <string name="add_new_user">Добавить ответственного</string>
+    <string name="tesponsible_not_specified">Ответственные не указаны</string>
+    <string name="address_books">Адресные книги</string>
+    <string name="archive">Архивные</string>
+    <string name="current">Текущие</string>
+    <string name="latest_date_for_visits_to_doctor">Последняя дата посещения врача %s</string>
+    <string name="list_is_empty">Список пуст</string>
+    <string name="please_select_address_book">Выберите адресную книгу</string>
+    <string name="latest_date_poll"></string>
+    <string name="the_visit_ended"></string>
+    <string name="visit_already_planned">Визит уже запланирован/совершен</string>
+    <string name="questionary_already">Необходимое количество анкет выполнено</string>
+    <string name="visit_expired">Поледняя дата опроса истекла</string>
+    <string name="visit_archive">Выбрана архивная адресная книга</string>
+    <string name="title_visit_questionary">Анкета</string>
+    <string name="new_visit_questionary">Новая анкета</string>
+    <string name="text_phone">Телефон</string>
+    <string name="text_code">Код</string>
+    <string name="address_book_error_enter_correct_code">Введите правильный код</string>
+    <string name="address_book_error_clm_not_found">Анкета не найдена</string>
+    <string name="address_book_error_enter_correct_phone">Введите корректный номер</string>
+    <string name="leave_questionnaire_ask">Уверены что хотите покинуть анкету?</string>
+    <string name="сompleted">Завершена</string>
+    <string name="not_сompleted">Не завершена</string>
+    <string name="title_sorts">Сортировки</string>
+    <string name="title_task_member">Участник</string>
+    <string name="button_title_add_member">+ Добавить участника</string>
+    <string name="message_error_not__members">Список участников пуст</string>
+    <string name="title_purpose">Напоминание</string>
+    <string name="title_text_visit_to_recheck">Посетить для профилирования</string>
+    <string name="title_text_recommended_visit_this_cycle">Рекомендовано посетить на этот цикл</string>
+    <string name="text_promo_period">Период раздачи:</string>
+    <string name="title_visit_date_next">Следующий визит</string>
+    <string name="title_visit_survey_control">Анкетирование</string>
+    <string name="text_doctor_rejected">Отказался участвовать</string>
+    <string name="text_clients_from_picked_company">Из выбранного учреждения</string>
+    <string name="promotions">Акции</string>
+    <string name="comment">Комментарий</string>
+    <string name="set_answer">Ваш ответ</string>
+    <string name="add_answer_plus">+ Добавить ответ</string>
+    <string name="title_visit_info">Информация по визиту</string>
+    <string name="title_visit_current">Текущий визит</string>
+    <string name="title_last_result_var">Результат визита (%s)</string>
+    <string name="title_visit_last_results_2">Результаты по двум предыдущим визитам (договоренность)</string>
+    <string name="title_notice">Наблюдения</string>
+    <string name="title_visit_observations_doctor">Наблюдения доктора</string>
+    <string name="title_visit_reminder_next_visit">Напоминание на след. визит</string>
+    <string name="reminders_on_visits">Напоминания на визиты</string>
+    <string name="button_title_work_start">Начать работу</string>
+    <string name="button_title_work_start_2">Старт работы</string>
+    <string name="button_title_work_finish">Завершение работы</string>
+    <string name="title_visit_control_preparate_fact">Факт</string>
+    <string name="clm_text_search">Поиск по CLM</string>
+    <string name="text_clm_add_tag">Добавить тег</string>
+    <string name="text_clm_enter_tag">Введите тег</string>
+
+    <string name="title_main_menu_button_interview">Тестирование</string>
+    <string name="test_not_found">Тест не найден</string>
+    <string name="message_check_phone">Перед запуском анкеты, желательно проверить мобильный телефон в карточке врача. Открыть карточку?</string>
+    <string name="favorites">Избранное</string>
+    <string name="portrait_of_patients">Портрет пациентов (где использует)</string>
+    <string name="arguments_plus">Аргументы+</string>
+    <string name="portrait_of_patients_objections">Портрет пациентов с конкурентами / возражения</string>
+    <string name="challenge_for_next_visit">Задача на следующий визит (качественная и колличественная)</string>
+    <string name="title_main_menu_button_pharmacovigilance">Фармнадзор</string>
+    <string name="title_new_vigilance">Новая анкета фармаконадзора</string>
+    <string name="title_update_vigilance">Изменение анкеты фармаконадзора</string>
+    <string name="title_main_menu_button_vigilance">Анкета фармаконадзора</string>
+    <string name="button_title_create_vigilance">Сохранить</string>
+    <string name="text_vigilance_overview">I. Общие сведения о побочной реакции (ПР) и/или отсутствии эффективности (ОЭ) лекарственного средства (ЛС)</string>
+    <string name="text_vigilance_number">Номер истории болезни / амбулаторной карты</string>
+    <string name="text_vigilance_birthday">Дата рождения</string>
+    <string name="text_vigilance_age_group">Возрастная группа</string>
+    <string name="text_vigilance_sex">Пол</string>
+    <string name="text_vigilance_consequence_pr_ve">Следствие ПР/ОЭ</string>
+    <string name="text_vigilance_start_pr_ve">Начало ПР/ОЭ</string>
+    <string name="text_vigilance_finish_pr_ve">Окончание ПР/ОЭ</string>
+    <string name="text_vigilance_desc_pr_ve">Описание ПР/ Указание ОЭ ЛС</string>
+    <string name="text_vigilance_category_pr_ve">Категория ПР/ОЭ</string>
+    <string name="text_vigilance_plz">Подозреваемое ЛC</string>
+    <string name="text_vigilance_manufacturer_country">Производитель, страна</string>
+    <string name="text_vigilance_serial_number">Номер серии</string>
+    <string name="text_vigilance_indications_for_use">Показания для назначения</string>
+    <string name="text_vigilance_dose">Разовая доза</string>
+    <string name="text_vigilance_multiplicity">Кратность приема</string>
+    <string name="text_vigilance_inputmethod">Способ введения ПЛС</string>
+    <string name="text_vigilance_means_of_correction_pr">ІV.Средства коррекции ПР</string>
+    <string name="text_vigilance_cancel_plz">Отмена ПЛС</string>
+    <string name="text_vigilance_cancel_plz_ask">Сопровождалась ли отмена ПЛС исчезновением ПР?</string>
+    <string name="text_vigilance_reappointment_plz">Повторное назначение ПЛС</string>
+    <string name="text_vigilance_reappointment_plz_ask">Отмечено ли возобновление ПР после повторного назначения ПЛС?</string>
+    <string name="text_vigilance_change_dose_mode_plz">Изменение режима дозирования ПЛС (снижение / повышение, определить, на сколько)</string>
+    <string name="text_vigilance_change_dose_mode_plz_ask">Отмечено ли возобновление ПР/ОЭ после изменения режима дозирования?</string>
+    <string name="text_vigilance_is_correction">Коррекцию ПР/ОЭ не проводили</string>
+    <string name="text_vigilance_notifier_information">V. Информация об уведомителе</string>
+    <string name="text_vigilance_phone_fax">Телефон / факс</string>
+    <string name="text_vigilance_email">Электронный адрес</string>
+    <string name="text_vigilance_comments">Комментарии</string>
+    <string name="text_vigilance_providing">Извещение предоставляет</string>
+    <string name="text_vigilance_hospital_name_address">Название и местонахождение учреждения здравоохранения или заявителя</string>
+    <string name="text_vigilance_message_source">Источник сообщения</string>
+    <string name="text_vigilance_message_source_other">Источник сообщения (другое)</string>
+    <string name="text_vigilance_date_get">Дата получения заявителем</string>
+    <string name="text_vigilance_message_type">Тип сообщения</string>
+    <string name="text_vigilance_input_date">Дата заполнения</string>
+    <string name="button_title_finished_vigilance">Завершить и отправить</string>
+    <string name="text_vigilance_related_drugs_info">ІІІ. Информация о сопутствующих ЛС</string>
+    <string name="text_vigilance_info3">Другая важная информация (диагнозы, аллергия, беременность с указанием продолжительности и т.д.)</string>
+    <string name="text_vigilance_accompanying_lz">Сопутствующие ЛС</string>
+    <string name="text_vigilance_add">+ Добавить</string>
+    <string name="text_vigilance_satellite_concomitant_lz">Сопутствующие ЛС (торговое наименование, лекарственная форма, производитель)</string>
+    <string name="text_vigilance_satellite_indications">Показания (по возможности по МКБ-10)</string>
+    <string name="text_vigilance_satellite_single_dose">Разовая доза</string>
+    <string name="text_vigilance_satellite_reception">Кратность приема</string>
+    <string name="text_vigilance_satellite_input_method">Способ введения</string>
+    <string name="text_vigilance_start_therapy">Начало терапии</string>
+    <string name="text_vigilance_finish_therapy">Окончание терапии</string>
+    <string name="text_profile_copy">Копирование анкеты</string>
+    <string name="text_profile_delete">Удаление анкеты</string>
+    <string name="text_profile_deleted">Анкета удалена</string>
+    <string name="text_profile_delete_ask">Удалить анкету?</string>
+    <string name="text_vigilance_therapy_start">Начало терапии ПЛС</string>
+    <string name="text_vigilance_therapy_finish">Окончание терапии ПЛС</string>
+    <string name="text_vigilance_updated">Анкета изменена</string>
+    <string name="text_vigilance_saved">Анкета сохранена</string>
+    <string name="text_vigilance_can_not_be_changed">Анкета завершена и не может быть изменена</string>
+    <string name="text_profile_can_not_be_deleted">Анкета завершена и не может быть удалена</string>
+    <string name="text_vigilance_info">II. Информация о подозреваемом ЛС (ПЛС), производителе ПЛС</string>
+    <string name="assignments_plan">План назначений</string>
+    <string name="the_appointment_of">Факт назначений за (месяц)</string>
+    <string name="left_to_plan">Осталось запланировать</string>
+    <string name="special_purpose">Целевое назначение</string>
+    <string name="microplanning_client">Микропланирование: Клиенты</string>
+    <string name="text_vigilance_drug_therapy_pr_ve">Медикаментозная терапия ПР/ОЭ (указать ЛС, режим дозирования, длительность назначения)</string>
+    <string name="send_db_to_server">Отправка копии данных на сервер</string>
+    <string name="to_send">Отправить</string>
+    <string name="message_error_password">Неверный пароль</string>
+    <string name="message_create_visit_success">Планирование прошло успешно</string>
+    <string name="message_create_visit_error">Ошибка при планировании</string>
+    <string name="title_visit_quality_control">Контроль качества</string>
+    <string name="text_handling_type">Тип обращения</string>
+    <string name="text_message_is_external_storage">Вы действительно хотите использовать внешнее хранилище данных? Необходим будет повторный запуск приложения.</string>
+    <string name="show_on_map">Показапть на карте</string>
+    <string name="microplanning_company">Микропланирование: компании</string>
+    <string name="error_sale_plan_values">Заполните все поля</string>
+    <string name="plan_for_shop">План на аптеку</string>
+    <string name="description">Описание</string>
+    <string name="button_title_add_photo">+ Добавить фото</string>
+    <string name="button_title_remove">Удалить</string>
+    <string name="pharmacy_sales_on_month">Продажи (%s)</string>
+    <string name="title_main_menu_button_quest_reclamation">Анкета Рекламации</string>
+    <string name="title_main_menu_button_reclamation">Рекламация</string>
+    <string name="text_reclamation_title1">1. Общие данные</string>
+    <string name="text_reclamation_dtGetting">Дата/время получения рекламации</string>
+    <string name="forgot_your_password_ask">Забыли пароль?</string>
+    <string name="request_has_been_sent">Запрос отправлен</string>
+    <string name="remind_password_send_password_ask"> Отправить пароль на ваш E-mail?</string>
+    <string name="request_has_been_not_sent">Не удалось отправить запрос</string>
+    <string name="text_reclamation_descr1">Суть рекламации</string>
+    <string name="text_reclamation_dtIncident1">Дата инцидента</string>
+    <string name="text_reclamation_title2">2. Информация о ЛС и месте покупки</string>
+    <string name="title_new_reclamation">Новая анкета рекламации</string>
+    <string name="title_update_reclamation">Редактирование анкеты рекламации</string>
+    <string name="text_reclamation_ls2">Наименование ЛС</string>
+    <string name="text_reclamation_isSerialNumberBlister2">Известен номер серии на блистере</string>
+    <string name="text_reclamation_serialNumberBlister2">Номер серии на блистере</string>
+    <string name="text_reclamation_shelfLifeBlister2">Срок годности на блистере</string>
+    <string name="text_reclamation_isSerialNumberBox2">Известен номер серии на упаковке</string>
+    <string name="text_reclamation_isCoincidesBlisterNumber2">Совпадает с указанным на блистере</string>
+    <string name="text_reclamation_serialNumberBox2">Номер серии на упаковке</string>
+    <string name="text_reclamation_shelfLifeBox2">Срок годности на упаковке</string>
+    <string name="text_reclamation_purchaseCompany2">Наименование и адрес места покупки</string>
+    <string name="text_reclamation_comments2">Комментарии к адресу</string>
+    <string name="text_reclamation_dtPurchase2">Дата покупки ЛС</string>
+    <string name="text_reclamation_dtOpen2">Дата вскрытия упаковки ЛС</string>
+    <string name="text_reclamation_storageConditions2">Реальные условия хранения ЛС</string>
+    <string name="text_reclamation_title3">3. Информация о предъявителе рекламации и потребителе</string>
+    <string name="text_reclamation_phones3">Номер телефона предъявителя рекламации</string>
+    <string name="text_reclamation_phoneComments3">Комментарии к телефону</string>
+    <string name="address_part_office">Офис</string>
+    <string name="text_reclamation_email3">Электронный адрес предъявителя рекламации</string>
+    <string name="text_reclamation_isVictim">Предъявитель является потерпевшим</string>
+    <string name="text_reclamation_victimPhones3">Номер телефона потерпевшего</string>
+    <string name="text_reclamation_victimPhoneComments3">Комментарии к телефону потерпевшего</string>
+    <string name="text_reclamation_victimEmail3">Электронный адрес потерпевшего</string>
+    <string name="office">Офис</string>
+    <string name="text_reclamation_date_elaboration">Уточнение даты</string>
+    <string name="invalid_photo_error">Некорректный файл, фото не добавлено</string>
+    <string name="button_title_apply">Применить</string>
+    <string name="title_activity_clmm_slide">Слайд</string>
+    <string name="patient_count_synevo">Поток пациентов (Synevo):</string>
+    <string name="account_is_blocking">Ваша учетная запись заблокирована!</string>
+    <string name="pdf_render_error">Ошибка отрисовки страницы</string>
+    <string name="msg_fatal_crash">Оооой! Видимо что-то пошло не так. Мы уже сохранили отчет об ошибке, чтобы сделать приложение лучше!</string>
+    <string name="text_message_update_this_visit_only_in_cart">Закрытые визиты можно изменять через карточку редактирования</string>
+    <string name="max_mb_mobile">Загружаемый пакет превышает рекомендованный объём в %1$s (на %2$s), рекомендуем подключиться к сети wi-fi. Всё равно продолжить?</string>
+    <string name="title_visit_request_additional_info">Запрос на дополнительную информацию</string>
+    <string name="text_control_request_info_want">Потребность</string>
+    <string name="text_control_request_info_infotype">Формы получения информации</string>
+    <string name="text_control_request_info_waystype">Пути получения информации</string>
+    <string name="button_title_request">запросить</string>
+    <string name="adv_resp_state_wait">Ожидает</string>
+    <string name="adv_resp_state_do_add">добавления</string>
+    <string name="adv_resp_state_do_del">удаления</string>
+    <string name="adv_resp_state_refused">Отказано</string>
+    <string name="adv_resp_state_in_removal">в удалении</string>
+    <string name="adv_resp_state_in_appendix">в добавлении</string>
+    <string name="title_main_menu_button_news_feed">Лента новостей</string>
+    <string name="title_clients_events">Мероприятия</string>
+    <string name="contact_event">Мероприятие</string>
+    <string name="title_event_type">Тип мероприятия</string>
+    <string name="message_enter_email">Введите электронную почту</string>
+    <string name="message_email_already_sent">Сегодня документ уже отправлен на данную электронную почту</string>
+    <string name="message_email_will_be_send">Документ будет отправлен на электронную почту</string>
+
+    <string name="title_event_name">Название мероприятия*</string>
+    <string name="title_author">Автор*</string>
+    <string name="title_event_datefrom">Начало*</string>
+    <string name="title_event_datetill">Окончание*</string>
+    <string name="no_data">Нет данных</string>
+    <string name="title_newsletters">Рассылки</string>
+    <string name="title_target_audience">Целевая аудитория</string>
+    <string name="title_distribution_method">Способ рассылки</string>
+    <string name="title_message">Сообщение</string>
+    <string name="filter_notifications">Уведомления о событиях</string>
+    <string name="filter_mailing">Рассылки</string>
+    <string name="filter_feedback">Обратная связь</string>
+    <string name="filter_from_to_date" formatted="false">За период с %2d.%02d.%d по %2d.%02d.%d</string>
+    <string name="filter_from_to" formatted="false">С %2d.%02d.%d по %2d.%02d.%d</string>
+    <string name="comment_in_topic">Комментарий в теме</string>
+    <string name="clarifying_comment_in_topic">Уточняющий комментарий в теме</string>
+    <string name="comment_from_the_manager">Комментарий от менеджера</string>
+    <string name="title_departments">Отделения</string>
+    <string name="text_no_departments">Нет отделений</string>
+    <string name="title_add_department">Добавить отделение</string>
+    <string name="department">Отделение</string>
+    <string name="head_of_department">Заведующий отделением</string>
+    <string name="age_group">Возрастная группа</string>
+    <string name="number_of_beds">Количество коек</string>
+    <string name="number_of_doctors">Количество врачей</string>
+    <string name="number_of_duty_man">В том числе дежурантов</string>
+    <string name="select_department">Укажите отделение</string>
+    <string name="title_edit_department">Редактировать отделение</string>
+    <string name="text_add_dop_dep">+ Добавить доп. отделение</string>
+
+    <string name="title_account_number">Номер аккаунта</string>
+    <string name="title_wholesaler">Поставщик</string>
+    <string name="title_wholesalers">Поставщики</string>
+    <string name="title_new_wholesaler">Новый поставщик</string>
+    <string name="title_rank">Ранг</string>
+    <string name="title_add_wholesaler">Добавить поставщика</string>
+    <string name="text_message_remove_wholesaler">Вы действительно хотите удалить данного поставщика?</string>
+
+    <string name="button_title_confirm_order">Подтвердить</string>
+    <string name="title_total">Общая сумма</string>
+    <string name="title_signature">Подпись</string>
+    <string name="message_make_signature">Сделайте вашу подпись</string>
+    <string name="title_activity">Активность</string>
+    <string name="define">Выбрать</string>
+    <string name="comments_count_">Комментарии (%d)</string>
+    <string name="title_schedule">Запланировать</string>
+    <string name="button_title_done">Выполнено</string>
+    <string name="button_title_to_progress">В прогресс</string>
+    <string name="title_activity_state">Статус</string>
+    <string name="title_activity_date_done">Дата готовности</string>
+    <string name="title_activity_date_set">Дата назначения</string>
+    <string name="warning_please_select_date_done">Укажите дату готовности</string>
+    <string name="button_title_add_region">+ Добавить область</string>
+    <string name="geography_location">География</string>
+
+    <string name="title_companies">Учреждения</string>
+    <string name="title_add_companies">+Добавить учреждение</string>
+    <string name="text_message_merk_brend_cannot_be_added">Cогласно Кодексу поведения компании Мерк (zero gift policy) невозможно установить промоцию на этот бренд, так как на визите уже оставлен подарок</string>
+    <string name="text_message_promo_cannot_be_added">Действие невозможно согласно Кодексу поведения компании Мерк (zero gift policy)</string>
+    <string name="title_launch">Лонч</string>
+    <string name="title_other">Остальные</string>
+
+    <string name="text_overdue_debt">просроченная задолженность: %.2f</string>
+    <string name="text_current_debt">Текущая задолженность</string>
+    <string name="title_history_of_debts_by_sp">История задолженности по СП</string>
+    <string name="date_of_purchase">Дата закупа</string>
+    <string name="amount_of_purchase">Сумма закупа</string>
+    <string name="date_of_debt_repayment">Дата погашения</string>
+    <string name="rest_amount">Остаток задолженности</string>
+    <string name="days_of_debt_repayment">Дни погашения</string>
+    <string name="days_of_rejection">Дни отклонения</string>
+    <string name="title_place_order_in">Разместить заказ в</string>
+    <string name="title_percent_discount_by_default">% скидки по умолчанию</string>
+    <string name="total_1c_plan" formatted="false">Сумма заказа с учетом \% скидки план: %.2f</string>
+    <string name="total_1c_podtv" formatted="false">Сумма заказа с учетом \% скидки подтв: %.2f</string>
+    <string name="title_request_status">Статус заявки</string>
+    <string name="button_title_diteil_debt">Детальная задолженность</string>
+    <string name="button_title_hist_debt">История задолженности</string>
+    <string name="seller">Продавец</string>
+    <string name="current_debt">Текущая задолженность</string>
+    <string name="purchase_debt">Просроченная задолженность</string>
+    <string name="ditailed_table_of_current_debt">Детальная таблица текущей задолженности</string>
+    <string name="message_not_enaugh_free_disk_space">Для проведения синхронизации недостаточно места на диске</string>
+    <string name="title_add_comments">+Добавить комментарии</string>
+    <string name="title_user_coments">Комментарий пользователя</string>
+    <string name="title_manager_comments">Ответ менеджера</string>
+    <string name="text_message_allow_usage_access">Разрешите приложению PharmaTouch доступ к истории использования приложений</string>
+    <string name="calculating_pts">Вычисление...</string>
+    <string name="call_rate_current_cycle">Среднее количество визитов за цикл: %.2f</string>
+
+    <string name="message_rooted_device">Приложение не поддерживает устройства с правами root.</string>
+</resources>

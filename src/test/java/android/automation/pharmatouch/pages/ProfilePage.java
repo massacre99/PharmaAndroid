@@ -1,15 +1,35 @@
 package android.automation.pharmatouch.pages;
 
+import android.automation.pharmatouch.utils.Properties;
 import io.appium.java_client.MobileDriver;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidKeyCode;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
 import java.util.Random;
 
 /**
  * Created by massacre99 on 27.03.2018.
  */
 public class ProfilePage extends BasePage {
+
+    // main menu
+    int exit;
+    int sync;
+    By allMainMenu = By.xpath("(.//*[@id='main_container'])[*]");
+    By profileButton = By.xpath(String.format("//*[@id='main_container' and ./*[@text='%s']]", Properties.title_main_menu_button_visits));
+    By companyButton = By.xpath(String.format("//*[@id='main_container' and ./*[@text='%s']]", Properties.title_main_menu_button_institutions));
+    By clientButton = By.xpath(String.format("//*[@id='main_container' and ./*[@text='%s']]", Properties.title_main_menu_button_clients));
+    By reportButton = By.xpath(String.format("//*[@id='main_container' and ./*[@text='%s']]", Properties.title_main_menu_button_reports));
+    By clmButton = By.xpath(String.format("//*[@id='main_container' and ./*[@text='%s']]", Properties.title_main_menu_button_presentations));
+    By exitButton = By.xpath(String.format("(.//*[@id='main_container'])[%s]",exit));
+    By syncButton = By.xpath(String.format("(.//*[@id='main_container'])[%s]",sync));
 
     By nextDay = By.id("com.trinetix.pharmatouch:id/imageArowForward");
     By prevDay = By.id("com.trinetix.pharmatouch:id/imageArowBack");
@@ -50,8 +70,36 @@ public class ProfilePage extends BasePage {
     By monthChoose = By.id("com.trinetix.pharmatouch:id/titleMonth");
     Random random = new Random();
 
-    public void clickToday() {
+    public void findExitSyncLocators() {
+        List<WebElement> allMenuItems = driver.findElements(allMainMenu);
+        exit = allMenuItems.size() - 1;
+        sync = allMenuItems.size();
+    }
 
+    public void createNewCompany() {
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(@resource-id,'main_container') and ./*[@text='Учреждения']]")));
+        driver.findElement(By.xpath("//*[contains(@resource-id,'main_container') and ./*[@text='Учреждения']]")).click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(@resource-id, 'action_bar_title')]")));
+        driver.findElement(By.xpath("//*[@class='android.view.View' and @enabled='true']")).click();
+        driver.findElement(By.xpath("//*[@text='Создать учреждение']")).click();
+        driver.findElement(By.xpath("//*[@text='Ок']")).click();
+//        driver.findElement(By.xpath("//*[@text='Название']")).sendKeys("GTFU Pharm");
+        MobileElement temp = (MobileElement) driver.findElement(By.xpath("//*[@text='Название']"));
+        temp.setValue("GTFU Pharm 2");
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Тип учреждения']")));
+        driver.findElement(By.xpath("//*[@text='Тип учреждения']")).click();
+        driver.findElement(By.xpath("(//*[contains(@resource-id, 'textName')])[2]")).click();
+        driver.findElement(By.xpath("//*[@text='Область']")).click();
+        driver.findElement(By.xpath("(//*[contains(@resource-id, 'textName')])[2]")).click();
+        driver.findElement(By.xpath("//*[@text='Город / Нас. пункт']")).click();
+        driver.findElement(By.xpath("(//*[contains(@resource-id, 'textName')])[1]")).click();
+        driver.findElement(By.xpath("//*[@text='Тип улицы']")).click();
+        driver.findElement(By.xpath("(//*[contains(@resource-id, 'textName')])[2]")).click();
+        driver.findElement(By.xpath("//*[@text='Улица']")).sendKeys("The Place");
+        driver.pressKeyCode(AndroidKeyCode.BACK);
+        driver.findElement(By.xpath("//*[@text='Создать учреждение']")).click();
+//        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Новое учреждение добавлено']")));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(@resource-id, 'button_edit')]")));
     }
 
     public void clickDaysMonth() {
@@ -77,7 +125,11 @@ public class ProfilePage extends BasePage {
 
     }
 
-    public ProfilePage(MobileDriver driver) {
+    public  void openCompanyPage() {
+
+    }
+
+    public ProfilePage(AndroidDriver driver) {
         super(driver);
     }
 }
