@@ -3,6 +3,7 @@ package android.automation.pharmatouch.pages;
 import android.automation.pharmatouch.utils.Properties;
 import io.appium.java_client.MobileDriver;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidKeyCode;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -10,7 +11,8 @@ import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.HashMap;
+import java.text.SimpleDateFormat;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -21,9 +23,109 @@ public class BasePage {
     protected WebDriverWait wait;
     protected JavascriptExecutor javascriptExecutor;
 
+    Random random = new Random();
+    Locale locale = new Locale("ru");
+    SimpleDateFormat dateFormat = new SimpleDateFormat("E, d.MM.yyyy", locale);
+    Calendar calendar = Calendar.getInstance(locale);
+
+
+
     // The same locators
     By plusViewButton = By.xpath("//*[@class='android.view.View' and @enabled='true']");
-    By editButton = By.xpath("//*[@id='button_edit']");
+
+
+    // main menu
+    int exit;
+    int sync;
+    By allMainMenu = By.xpath("(//*[contains(@resource-id,'main_container'))[*]");
+    By profileButton = By.xpath(String.format("//*[contains(@resource-id,'main_container') and ./*[@text='%s']]", Properties.title_main_menu_button_visits));
+    By companyButton = By.xpath(String.format("//*[contains(@resource-id,'main_container') and ./*[@text='%s']]", Properties.title_main_menu_button_institutions));
+    By companyPageTitle = By.xpath(String.format("//*[contains(@resource-id, 'action_bar_title') and @text='%s']", Properties.title_main_menu_button_institutions));
+    By contactButton = By.xpath(String.format("//*[contains(@resource-id,'main_container') and ./*[@text='%s']]", Properties.title_main_menu_button_clients));
+    By contactPageTitle = By.xpath(String.format("//*[contains(@resource-id, 'action_bar_title') and @text='%s']", Properties.title_main_menu_button_clients));
+    By reportButton = By.xpath(String.format("//*[contains(@resource-id,'main_container') and ./*[@text='%s']]", Properties.title_main_menu_button_reports));
+    By reportPageTitle = By.xpath(String.format("//*[contains(@resource-id, 'action_bar_title') and @text='%s']", Properties.title_main_menu_button_reports));
+    By clmButton = By.xpath(String.format("//*[contains(@resource-id,'main_container') and ./*[@text='%s']]", Properties.title_main_menu_button_presentations));
+    By clmPageTitle = By.xpath(String.format("//*[contains(@resource-id, 'action_bar_title') and @text='%s']", Properties.title_main_menu_button_presentations));
+    By exitButton = By.xpath(String.format("(//*[contains(@resource-id,'main_container'))[%s]",exit));
+    By syncButton = By.xpath(String.format("(//*[contains(@resource-id,'main_container'))[%s]",sync));
+
+
+
+    public void goToProfilePage() {
+        driver.findElement(profileButton).click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("imageArowForward")));
+    }
+
+    public void goToCompanyPage() {
+        driver.findElement(companyButton).click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(companyPageTitle));
+    }
+
+    public void goToContactPage() {
+        driver.findElement(contactButton).click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(contactPageTitle));
+    }
+
+    public void goToReportPage() {
+        driver.findElement(reportButton).click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(reportPageTitle));
+    }
+
+    public void goToClmPage() {
+        driver.findElement(clmButton).click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(clmPageTitle));
+    }
+
+    public void goToExitPage() {
+        findExitSyncLocators();
+        driver.findElement(exitButton).click();
+        // todo шото там
+    }
+
+    public void sync() {
+        findExitSyncLocators();
+        driver.findElement(syncButton).click();
+        // todo шото там
+    }
+
+
+    public void findExitSyncLocators() {
+        List<WebElement> allMenuItems = driver.findElements(allMainMenu);
+        exit = allMenuItems.size() - 1;
+        sync = allMenuItems.size();
+    }
+
+    public String getToastMessage() {
+        WebElement toastView = driver.findElement(By.xpath("//android.widget.Toast[1]"));
+        String text = toastView.getAttribute("name");
+        return text;
+    }
+
+    public By getTextNameElement(int value) {
+        By textNameElement = By.xpath(String.format("(//*[contains(@resource-id, 'textName')])[%s]", value));
+        return textNameElement;
+    }
+
+    public By getTextViewElement(int value) {
+        By textViewElement = By.xpath(String.format("(//*[contains(@resource-id, 'textView')])[%s]", value));
+        return textViewElement;
+    }
+
+    public By getTaskElement(int value) {
+        By taskElement = By.xpath(String.format("(//*[contains(@resource-id, 'event_color_bg')])[%s]", value));
+        return taskElement;
+    }
+
+    public By getTaskTextLocators() {
+        By taskText = By.id("text_event_name");
+        return taskText;
+    }
+
+    public void exitToVisibleMenu() {
+        driver.pressKeyCode(AndroidKeyCode.BACK);
+        waitForVisible(profileButton);
+    }
 
 
     public BasePage(AndroidDriver driver) {
@@ -33,7 +135,7 @@ public class BasePage {
 
     }
 
-    protected void waitForClickable(By locator, int waitTime) {
+    public void waitForClickable(By locator, int waitTime) {
         WebDriverWait wait = new WebDriverWait(driver, waitTime);
         for (int attempt = 0; attempt < waitTime; attempt++) {
             try {
@@ -46,7 +148,7 @@ public class BasePage {
         wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
 
-    protected  void waitForVisible(final By locator, int waitTime) {
+    public void waitForVisible(final By locator, int waitTime) {
         WebDriverWait wait = new WebDriverWait(driver, waitTime);
         for (int attempt = 0; attempt < waitTime; attempt++) {
             try {
@@ -59,6 +161,9 @@ public class BasePage {
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
+    public void waitForVisible(By locator) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
 
     public void scrollPageUp() {
         JavascriptExecutor js = (JavascriptExecutor) driver;

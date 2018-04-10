@@ -1,5 +1,6 @@
 package android.automation.pharmatouch.utils;
 
+import android.automation.pharmatouch.pages.CompanyEditPage;
 import android.automation.pharmatouch.pages.LoginPage;
 import android.automation.pharmatouch.pages.ProfilePage;
 import io.appium.java_client.android.AndroidDriver;
@@ -15,6 +16,7 @@ public class BaseTest {
     protected AndroidDriver driver;
     protected ProfilePage profilePage;
     protected LoginPage loginPage;
+    protected CompanyEditPage companyEditPage;
 
     @BeforeClass
     public void setUp() throws MalformedURLException {
@@ -32,6 +34,7 @@ public class BaseTest {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
         profilePage = new ProfilePage(driver);
+        companyEditPage = new CompanyEditPage(driver);
 
     }
 }

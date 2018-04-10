@@ -8,9 +8,19 @@ import org.testng.annotations.Test;
  */
 public class t2_ProfilePageTest extends BaseTest {
 
-    @Test
-    public void clickTest() {
-//        profilePage.clickDaysMonth();
-        profilePage.createNewCompany();
+    @Test(testName = "date at profile page")
+    public void PA1() {
+        profilePage.clickDaysMonth();
+//        companyEditPage.createNewCompany();
+    }
+
+    @Test //(dependsOnMethods = "PA3")
+    public void PA2() {
+        profilePage.swipeVisitAtWeek();
+    }
+
+    @Test(testName = "Add visit from + Button")
+    public void PA3() {
+        profilePage.addNewVisit();
     }
 }
