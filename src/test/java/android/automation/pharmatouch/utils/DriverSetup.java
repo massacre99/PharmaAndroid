@@ -43,7 +43,11 @@ public class DriverSetup {
         capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".StartActivity");
         capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
 
-//        capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.ANDROID_UIAUTOMATOR2); //for android 7+
+//        capabilities.setCapability(AndroidMobileCapabilityType.UNICODE_KEYBOARD, true);
+//        capabilities.setCapability(AndroidMobileCapabilityType.RESET_KEYBOARD, true);
+
+        capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.ANDROID_UIAUTOMATOR2); //for android 6+
+
 //        capabilities.setCapability(AndroidMobileCapabilityType.NO_SIGN, true);
 
 //        capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.APPIUM);

@@ -11,7 +11,7 @@ public class t2_ProfilePageTest extends BaseTest {
     @Test(testName = "date at profile page")
     public void PA1() {
         profilePage.clickDaysMonth();
-//        companyEditPage.createNewCompany();
+
     }
 
     @Test //(dependsOnMethods = "PA3")
@@ -22,5 +22,10 @@ public class t2_ProfilePageTest extends BaseTest {
     @Test(testName = "Add visit from + Button")
     public void PA3() {
         profilePage.addNewVisit();
+    }
+
+    @Test
+    public void PA99 () {
+        companyEditPage.createNewCompany();
     }
 }

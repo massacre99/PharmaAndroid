@@ -1,11 +1,14 @@
 package android.automation.pharmatouch.pages;
 
 import android.automation.pharmatouch.utils.Properties;
+import android.automation.pharmatouch.utils.logging.CompanyModel;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidKeyCode;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+
 
 /**
  * Created by massacre99 on 03.04.2018.
@@ -50,7 +53,14 @@ public class CompanyEditPage extends BasePage {
     By companyConnectedPlace = By.xpath(String.format("//*[@text='%s']", Properties.title_agensy_connected_places));
 
 
-    public void createNewCompany() {
+    public CompanyModel createNewCompany() {
+        String name;
+        String type;
+        String city;
+        String street;
+        name = fakerEn.company().name();
+        street = fakerEn.address().streetName();
+
         wait.until(ExpectedConditions.presenceOfElementLocated(companyButton));
         driver.findElement(companyButton).click();
         wait.until(ExpectedConditions.presenceOfElementLocated(companyActionBar));
@@ -59,22 +69,26 @@ public class CompanyEditPage extends BasePage {
         wait.until(ExpectedConditions.presenceOfElementLocated(createCompanyOkPopupButton));
         driver.findElement(createCompanyOkPopupButton).click();
 
-        MobileElement compName = (MobileElement) driver.findElement(companyName);
-        compName.setValue("Test Name Pharm");
-        driver.pressKeyCode(AndroidKeyCode.BACK);
+        driver.findElement(companyName).click();
+        driver.getKeyboard().sendKeys("ыаыаыа");
+//
+//        compName.setValue("Русское название");
+
 
         driver.findElement(companyType).click();
+        type = driver.findElement(getTextNameElement(2)).getText();
         driver.findElement(getTextNameElement(2)).click();
         driver.findElement(companyRegion).click();
         driver.findElement(getTextNameElement(2)).click();
         driver.findElement(companyCity).click();
+        city = driver.findElement(getTextNameElement(1)).getText();
         driver.findElement(getTextNameElement(1)).click();
         driver.findElement(companyStreetType).click();
         driver.findElement(getTextNameElement(2)).click();
 
-        MobileElement streetName = (MobileElement) driver.findElement(companyStreet);
-        streetName.setValue("The Place Street");
-        driver.pressKeyCode(AndroidKeyCode.BACK);
+        driver.findElement(companyStreet).click();
+        driver.getKeyboard().sendKeys("ыаыаыа");
+
 
         driver.findElement(createCompanyButton).click();
 
@@ -83,6 +97,10 @@ public class CompanyEditPage extends BasePage {
 
         wait.until(ExpectedConditions.presenceOfElementLocated(editCompanyButton));
         exitToVisibleMenu();
+        CompanyModel newCompany = new CompanyModel(name, street, city);
+        newCompany.setType(type);
+
+        return newCompany;
     }
 
 

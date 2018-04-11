@@ -1,6 +1,7 @@
 package android.automation.pharmatouch.pages;
 
 import android.automation.pharmatouch.utils.Properties;
+import com.github.javafaker.Faker;
 import io.appium.java_client.MobileDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidKeyCode;
@@ -28,6 +29,9 @@ public class BasePage {
     SimpleDateFormat dateFormat = new SimpleDateFormat("E, d.MM.yyyy", locale);
     Calendar calendar = Calendar.getInstance(locale);
 
+    Faker fakerRu = new Faker(new Locale("ru", "ru"));
+    Faker fakerUa = new Faker(new Locale("uk", "ua"));
+    Faker fakerEn = new Faker(new Locale("en", "us"));
 
 
     // The same locators
