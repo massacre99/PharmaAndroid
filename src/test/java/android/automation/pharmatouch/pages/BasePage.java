@@ -99,37 +99,45 @@ public class BasePage {
         exit = allMenuItems.size() - 1;
         sync = allMenuItems.size();
     }
-
+    // выдача сообщения тоаста
     public String getToastMessage() {
         WebElement toastView = driver.findElement(By.xpath("//android.widget.Toast[1]"));
         String text = toastView.getAttribute("name");
         return text;
     }
 
+    // выдача элемента дропбокса в компаниях, клиентах
     public By getTextNameElement(int value) {
         By textNameElement = By.xpath(String.format("(//*[contains(@resource-id, 'textName')])[%s]", value));
         return textNameElement;
     }
 
+    // выдача компании + адреса в дропбоксе визита
     public By getTextViewElement(int value) {
         By textViewElement = By.xpath(String.format("(//*[contains(@resource-id, 'textView')])[%s]", value));
         return textViewElement;
     }
 
+    // выдача таска
     public By getTaskElement(int value) {
         By taskElement = By.xpath(String.format("(//*[contains(@resource-id, 'event_color_bg')])[%s]", value));
         return taskElement;
     }
 
+
+    // выдача текста, который находится на таске
     public By getTaskTextLocators() {
         By taskText = By.id("text_event_name");
         return taskText;
     }
 
+
+    // выход до видимости меню
     public void exitToVisibleMenu() {
         driver.pressKeyCode(AndroidKeyCode.BACK);
         waitForVisible(profileButton);
     }
+
 
 
     public BasePage(AndroidDriver driver) {

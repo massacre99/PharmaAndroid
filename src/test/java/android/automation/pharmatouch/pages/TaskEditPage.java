@@ -36,6 +36,7 @@ public class TaskEditPage extends BasePage {
         driver.findElement(createTaskButton).click();
         driver.findElement(createVisitOkPopupButton).click();
         driver.findElement(companyTask).click();
+        waitForVisible(By.id("header_title_text"));
         driver.findElement(getTextViewElement(2)).click();
         driver.findElement(createTaskButton).click();
 

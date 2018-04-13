@@ -7,7 +7,15 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidKeyCode;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -16,6 +24,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 public class CompanyEditPage extends BasePage {
 
     // company new edit locators button_create_agensy
+
+    By companyTextFieldTitle = By.id("textViewEditTextTitle"); // тайтлы текстовых редактируемых полей
+    By companyTextFieldText = By.id("editTextCustomView"); //текст в редактируемых полях
+    By companyDropboxFieldTitle = By.id("textViewTitle"); // тайтлы в дропбоксовых полях
+    By companyDropboxFieldText = By.id("layoutForInflateViews"); // тайтлы в дропбоксовых полях
+
 
 
     By createCompanyButton = By.id("button_create_agensy");
@@ -52,6 +66,89 @@ public class CompanyEditPage extends BasePage {
     By companyArchiveReason = By.xpath(String.format("//*[@text='%s']", Properties.title_text_archivereason));
     By companyConnectedPlace = By.xpath(String.format("//*[@text='%s']", Properties.title_agensy_connected_places));
 
+
+    public void createNewCompany1() {
+
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(companyButton));
+        driver.findElement(companyButton).click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(companyActionBar));
+        driver.findElement(plusViewButton).click();
+        driver.findElement(createCompanyButton).click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(createCompanyOkPopupButton));
+        driver.findElement(createCompanyOkPopupButton).click();
+
+        driver.findElement(companyName).click();
+        driver.getKeyboard().sendKeys(fakerRu.company().name());
+//
+//        compName.setValue("Русское название");
+
+
+        driver.findElement(companyType).click();
+       driver.findElement(getTextNameElement(2)).getText();
+        driver.findElement(getTextNameElement(2)).click();
+        driver.findElement(companyRegion).click();
+        driver.findElement(getTextNameElement(2)).click();
+        driver.findElement(companyCity).click();
+        driver.findElement(getTextNameElement(1)).getText();
+        driver.findElement(getTextNameElement(1)).click();
+        driver.findElement(companyStreetType).click();
+        driver.findElement(getTextNameElement(2)).click();
+
+        driver.findElement(companyStreet).click();
+        driver.getKeyboard().sendKeys(fakerRu.address().streetName());
+
+        getCompanyDetailInMap();
+
+        driver.findElement(createCompanyButton).click();
+        // works only on UIAutomator2, else comment. TODO toast
+//        Assert.assertEquals(Properties.text_message_add_new_company, getToastMessage());
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(editCompanyButton));
+        exitToVisibleMenu();
+
+    }
+
+    public void getCompanyDetailInMap() {
+
+        Map<String, String> companyDetails = new HashMap<>();
+
+        List<WebElement> textFieldTitle = driver.findElements(companyTextFieldTitle);
+        List<WebElement> textFieldText = driver.findElements(companyTextFieldText);
+        List<WebElement> textDropboxTitle = driver.findElements(companyDropboxFieldTitle);
+        List<String> textDropboxText = new ArrayList<>();
+
+        Assert.assertTrue(textFieldTitle.size() == textFieldText.size(), "Size not same");
+
+        for (int i = 0; i < textFieldTitle.size(); i++) {
+            companyDetails.put(textFieldTitle.get(i).getText(), textFieldText.get(i).getText());
+        }
+
+
+        for (int i = 1; i <= textDropboxTitle.size() ; i++) {
+
+            try {
+                textDropboxText.add(driver.findElement(getDropBoxFieldTextElement(i)).getText());
+            } catch (NoSuchElementException e) {
+                textDropboxText.add("");
+            }
+        }
+
+        Assert.assertTrue(textDropboxTitle.size() == textDropboxText.size(), "Size not same");
+
+        for (int i = 0; i < textDropboxTitle.size() ; i++) {
+            companyDetails.put(textDropboxTitle.get(i).getText(), textDropboxText.get(i));
+        }
+
+        for (Map.Entry<String, String> stringStringEntry : companyDetails.entrySet()) {
+            System.out.println(stringStringEntry.getKey() + " : " + stringStringEntry.getValue());
+        }
+    }
+
+    public By getDropBoxFieldTextElement(int value) {
+        By DropBoxFieldTextElement = By.xpath(String.format("(//*[contains(@resource-id, 'layoutForInflateViews')])[%s]//*[contains(@resource-id, 'textViewValue')]", value));
+        return DropBoxFieldTextElement;
+    }
 
     public CompanyModel createNewCompany() {
         String name;
@@ -102,6 +199,7 @@ public class CompanyEditPage extends BasePage {
 
         return newCompany;
     }
+
 
 
 

@@ -26,6 +26,6 @@ public class t2_ProfilePageTest extends BaseTest {
 
     @Test
     public void PA99 () {
-        companyEditPage.createNewCompany();
+        companyEditPage.createNewCompany1();
     }
 }
