@@ -2,10 +2,11 @@ package android.automation.pharmatouch.pages;
 
 import android.automation.pharmatouch.utils.Properties;
 import com.github.javafaker.Faker;
-import io.appium.java_client.MobileDriver;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidKeyCode;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebElement;
@@ -13,13 +14,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 /**
  * Created by massacre99 on 27.03.2018.
  */
-public class BasePage {
+abstract class BasePage {
     protected AndroidDriver driver;
     protected WebDriverWait wait;
     protected JavascriptExecutor javascriptExecutor;
@@ -53,6 +55,13 @@ public class BasePage {
     By clmPageTitle = By.xpath(String.format("//*[contains(@resource-id, 'action_bar_title') and @text='%s']", Properties.title_main_menu_button_presentations));
     By exitButton = By.xpath(String.format("(//*[contains(@resource-id,'main_container'))[%s]",exit));
     By syncButton = By.xpath(String.format("(//*[contains(@resource-id,'main_container'))[%s]",sync));
+
+    By editTaskButton = By.id("buttonEditVisit");
+    By deleteTaskButton = By.id("buttonDeleteVisit");
+    By yesOkPopupButton = By.id("add_to_visit");
+    By noPopupButton = By.id("edit");
+
+    By scrollViewDayWeek = By.id("drag_layer");
 
 
 
@@ -176,6 +185,23 @@ public class BasePage {
     public void waitForVisible(By locator) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
+
+
+
+    public void test() {
+        Dimension size = driver.findElement(scrollViewDayWeek).getSize();
+        int startX = size.width / 2;
+        int startY = size.height;
+        int endY = size.height / 3;
+        List<WebElement> elements1 = driver.findElements(By.xpath("//*[contains(@resource-id, 'event_color_bg')]"));
+        while (elements1.size() == 0)
+        { // TODO можно добавить быстрее/медленнее, в зависимости
+            new TouchAction(driver).press(startX, startY).waitAction(Duration.ofMillis(500)).
+                    moveTo(startX, endY).release().perform();
+            elements1 = driver.findElements(By.xpath("//*[contains(@resource-id, 'event_color_bg')]"));
+        }
+    }
+
 
     public void scrollPageUp() {
         JavascriptExecutor js = (JavascriptExecutor) driver;

@@ -21,11 +21,18 @@ public class t2_ProfilePageTest extends BaseTest {
 
     @Test(testName = "Add visit from + Button")
     public void PA3() {
-        profilePage.addNewVisit();
+        profilePage.addNewTask();
     }
 
     @Test
-    public void PA99 () {
-        companyEditPage.createNewCompany1();
+    public void PA5 () {
+        profilePage.deleteRandomTask();
+
+    }
+
+    @Test
+    public void test() {
+        profilePage.deleteRandomTask();
+        //        companyEditPage.createNewCompany();
     }
 }

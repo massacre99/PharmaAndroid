@@ -3,6 +3,7 @@ package android.automation.pharmatouch.utils;
 import android.automation.pharmatouch.pages.CompanyEditPage;
 import android.automation.pharmatouch.pages.LoginPage;
 import android.automation.pharmatouch.pages.ProfilePage;
+import android.automation.pharmatouch.pages.TaskActionEditPage;
 import io.appium.java_client.android.AndroidDriver;
 import org.testng.annotations.BeforeClass;
 
@@ -17,6 +18,7 @@ public class BaseTest {
     protected ProfilePage profilePage;
     protected LoginPage loginPage;
     protected CompanyEditPage companyEditPage;
+    protected TaskActionEditPage task;
 
     @BeforeClass
     public void setUp() throws MalformedURLException {

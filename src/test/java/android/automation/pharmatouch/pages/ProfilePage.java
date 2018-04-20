@@ -1,10 +1,12 @@
 package android.automation.pharmatouch.pages;
 
-import io.appium.java_client.MobileElement;
+
+import android.automation.pharmatouch.utils.Properties;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidKeyCode;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
@@ -28,7 +30,7 @@ public class ProfilePage extends BasePage {
     By textHeadCalendar = By.id("textHeadCalendar");
     // createVisitTask
     By addNewActivity = By.xpath("//android.view.View[@index='1']");
-//    By createNewVisitTask = By.id(); TODO реализовать в TaskEditPage
+//    By createNewVisitTask = By.id(); TODO реализовать в TaskActionEditPage
     // TODO реализовать если не выйдет найти элементы ActionBar по Xpath
  /*   public void tapOnActionBarElement(int index){
         List<WebElement> elements = driver.findElementByClass("PUT YOUR class name");
@@ -63,6 +65,12 @@ public class ProfilePage extends BasePage {
     // tasks
 
     By allTask = By.xpath("//*[contains(@resource-id, 'event_color_bg')]");
+
+    // day statistic
+
+    By countPlanTask = By.xpath("(//*[contains(@resource-id, 'count_task')])[1]");
+    By countDoneTask = By.xpath("(//*[contains(@resource-id, 'count_task')])[2]");
+    By countCancelTask = By.xpath("(//*[contains(@resource-id, 'count_task')])[3]");
 
 
 
@@ -110,15 +118,21 @@ public class ProfilePage extends BasePage {
                 "Date are not equals, SMTH wrong!");
     }
 
-    public void addNewVisit() {
+    public void addNewTask() {
+        TaskActionEditPage task = openNewTaskActionEditPage();
+        task.fillNewVisit();
+    }
+
+    public TaskActionEditPage openNewTaskActionEditPage() {
         driver.findElement(plusViewButton).click();
-        TaskEditPage task = new TaskEditPage(driver);
-        task.addNewVisit();
+        return new TaskActionEditPage(driver);
     }
 
     public void swipeVisitAtWeek() {
         driver.findElement(dayWeekMonthChoose).click();
         driver.findElement(weekChoose).click();
+
+        scrollDownWhileFindTaskAtDay();
 
         wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(allTask));
 
@@ -126,6 +140,18 @@ public class ProfilePage extends BasePage {
 
         WebElement task = tasks.get(2);
         String text = task.getText();
+        task.click();
+// todo переделать это дерьмо под пейдж обжект
+        TaskActionPage currentTask = new TaskActionPage(driver);
+
+        // берем строку дейтфром дейттилл таска до свайпа и после
+        String taskText = currentTask.getTaskDatefromDatetillText();
+        String taskText2 = new String();
+
+        driver.pressKeyCode(AndroidKeyCode.BACK);
+
+        tasks = driver.findElements(getTaskTextLocators());
+        task = tasks.get(2);
 
         new TouchAction(driver).press(task).waitAction(Duration.ofSeconds(25))
                .moveTo(350, 420).release().perform();
@@ -135,15 +161,57 @@ public class ProfilePage extends BasePage {
         for (WebElement webElement : tasks) {
             if (webElement.getText().equals(text)) {
                 webElement.click();
-
+                taskText2 = currentTask.getTaskDatefromDatetillText();
                 driver.pressKeyCode(AndroidKeyCode.BACK); }
         }
 
+        Assert.assertNotEquals(taskText,taskText2);
         driver.findElement(dayWeekMonthChoose).click();
         driver.findElement(dayChoose).click();
         waitForVisible(profileButton);
     }
 
+    public void deleteRandomTask() {
+
+        scrollDownWhileFindTaskAtDay();
+
+        List<WebElement> tasks = driver.findElements(getTaskTextLocators());
+        int count = getTaskCount();
+        try {
+            tasks.get(0).click();
+            driver.findElement(deleteTaskButton).click();
+            waitForVisible(yesOkPopupButton);
+            driver.findElement(yesOkPopupButton).click();
+
+            // works only on UIAutomator2, else comment. TODO toast
+            Assert.assertEquals(Properties.text_message_remove_visit, getToastMessage());
+            Assert.assertTrue(count - getTaskCount() == 1);
+
+            waitForVisible(profileButton);
+        } catch (NoSuchElementException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public void scrollDownWhileFindTaskAtDay() {
+        Dimension size = driver.findElement(scrollViewDayWeek).getSize();
+        int startX = size.width / 2;
+        int startY = size.height;
+        int endY = size.height / 3;
+        List<WebElement> elements1 = driver.findElements(allTask);
+        while (elements1.size() == 0)
+        { // TODO можно добавить быстрее/медленнее, в зависимости
+            new TouchAction(driver).press(startX, startY).waitAction(Duration.ofMillis(500)).
+                    moveTo(startX, endY).release().perform();
+            elements1 = driver.findElements(allTask);
+        }
+    }
+
+    public int getTaskCount() {
+        return Integer.parseInt(driver.findElement(countPlanTask).getText());
+
+    }
 
     /*
     public By getCopyMoveDateElement() {
