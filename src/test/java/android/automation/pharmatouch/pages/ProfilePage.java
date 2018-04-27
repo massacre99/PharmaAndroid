@@ -4,7 +4,6 @@ package android.automation.pharmatouch.pages;
 import android.automation.pharmatouch.utils.Properties;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidKeyCode;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
@@ -138,15 +137,19 @@ public class ProfilePage extends BasePage {
     }
 
     public void addNewTask() {
-        TaskActionEditPage task = openNewTaskActionEditPageFromPlusButton();
-        task.fillNewVisit();
+        TaskActionEditPage newTaskEdit = openNewTaskActionEditPageFromPlusButton();
+        newTaskEdit.fillNewTask();
+        TaskActionPage createdTask = newTaskEdit.clickSaveButtonToSaveTask();
+
+        Assert.assertEquals(Properties.text_message_add_new_visit, getToastMessage());
+
+        createdTask.taskActionPageWaitForLoad();
+        createdTask.exitToProfilePageWithArrowButton();
     }
 
 
     public void swipeVisitAtWeek() {
-        driver.findElement(dayWeekMonthChoose).click();
-        driver.findElement(weekChoose).click();
-
+        goToWeekProfile();
         scrollDownWhileFindTaskAtDay();
 
         wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(allTask));
@@ -162,7 +165,7 @@ public class ProfilePage extends BasePage {
         String taskDate = currentTask.getTaskDatefromDatetillText();
         String taskDate2 = new String();
 
-        driver.pressKeyCode(AndroidKeyCode.BACK);
+        currentTask.exitToProfilePageWithArrowButton();
 
         tasks = driver.findElements(getTaskTextLocators());
         task = tasks.get(2);
@@ -172,17 +175,31 @@ public class ProfilePage extends BasePage {
 
         tasks = driver.findElements(getTaskTextLocators());
 
+        Boolean find = false;
+
         for (WebElement webElement : tasks) {
+            if (find) break;
             if (webElement.getText().equals(text)) {
                 TaskActionPage currentTask2 = clickOnTask(webElement);
                 taskDate2 = currentTask2.getTaskDatefromDatetillText();
-                driver.pressKeyCode(AndroidKeyCode.BACK); }
+                currentTask2.exitToProfilePageWithArrowButton();
+                find = true;
+            }
         }
 
         Assert.assertNotEquals(taskDate,taskDate2);
+        goToDayProfile();
+        waitForVisible(profileButton);
+    }
+
+    public void goToDayProfile() {
         driver.findElement(dayWeekMonthChoose).click();
         driver.findElement(dayChoose).click();
-        waitForVisible(profileButton);
+    }
+
+    public void goToWeekProfile() {
+        driver.findElement(dayWeekMonthChoose).click();
+        driver.findElement(weekChoose).click();
     }
 
 /*
@@ -238,7 +255,7 @@ public class ProfilePage extends BasePage {
         int count = getTaskCount();
         try {
             TaskActionPage task = clickOnTask(tasks.get(0));
-            task.deleteTask();
+            task.deleteTaskCreatedFromProfilePage();
 
             // works only on UIAutomator2, else comment. TODO toast
             Assert.assertEquals(Properties.text_message_remove_visit, getToastMessage());

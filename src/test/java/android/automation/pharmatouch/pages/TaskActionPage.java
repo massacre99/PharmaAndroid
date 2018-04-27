@@ -1,7 +1,9 @@
 package android.automation.pharmatouch.pages;
 
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidKeyCode;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 /**
  * Created by massacre99 on 19.04.2018.
@@ -53,6 +55,43 @@ public class TaskActionPage extends BasePage {
         return new ProfilePage(driver);
     }
 
+    public CompanyPage exitToCompanyPageWithArrowButton() {
+        driver.findElement(arrowBackButton).click();
+        return new CompanyPage(driver);
+    }
+
+    public CompanyPage exitToCompanyPageWithAndroidKey() {
+        driver.pressKeyCode(AndroidKeyCode.BACK);
+        return new CompanyPage(driver);
+    }
+
+
+    public ContactPage exitToContactPageWithArrowButton() {
+        driver.findElement(arrowBackButton).click();
+        return new ContactPage(driver);
+    }
+
+    public ContactPage exitToContactPageWithAndroidKey() {
+        driver.pressKeyCode(AndroidKeyCode.BACK);
+        return new ContactPage(driver);
+    }
+
+    public ProfilePage exitToProfilePageWithArrowButton() {
+        driver.findElement(arrowBackButton).click();
+        return new ProfilePage(driver);
+    }
+
+    public ProfilePage exitToProfilePageWithAndroidKey() {
+        driver.pressKeyCode(AndroidKeyCode.BACK);
+        return new ProfilePage(driver);
+    }
+
+
+    public void taskActionPageWaitForLoad() {
+        wait.until(ExpectedConditions.presenceOfElementLocated(editTaskButton));
+    }
+
+
 
 
 
@@ -62,11 +101,11 @@ public class TaskActionPage extends BasePage {
         return driver.findElement(taskDatefromDatetill).getText();
     }
 
-    public void deleteTask() {
-        driver.findElement(deleteTaskButton).click();
-        waitForVisible(yesOkPopupButton);
-        driver.findElement(yesOkPopupButton).click();
-    }
+//    public void deleteTask() {
+//        driver.findElement(deleteTaskButton).click();
+//        waitForVisible(yesOkPopupButton);
+//        driver.findElement(yesOkPopupButton).click();
+//    }
 
 
     public TaskActionPage(AndroidDriver driver) {

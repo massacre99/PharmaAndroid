@@ -114,19 +114,17 @@ public class TaskActionEditPage extends BasePage {
     }
 
 
-    public void fillNewVisit() {
+    public void fillNewTask() {
         wait.until(ExpectedConditions.presenceOfElementLocated(createTaskTitle));
         driver.findElement(createTaskActionButton).click();
         driver.findElement(createTaskOkPopupButton).click();
         driver.findElement(taskActionCompany).click();
         waitForVisible(By.id("header_title_text"));
         driver.findElement(getTextViewElement(2)).click();
-        driver.findElement(createTaskActionButton).click();
-
-//        // works only on UIAutomator2, else comment. TODO toast
-        Assert.assertEquals(Properties.text_message_add_new_visit, getToastMessage());
-        wait.until(ExpectedConditions.presenceOfElementLocated(editTaskButton));
-        exitToVisibleMenu();
+//        driver.findElement(createTaskActionButton).click();
+//
+//
+//        exitToVisibleMenu();
     }
 
 

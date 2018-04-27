@@ -32,7 +32,7 @@ public class t2_ProfilePageTest extends BaseTest {
 
     @Test
     public void test() {
-        profilePage.deleteRandomTask();
+//        profilePage.deleteRandomTask();
         //        companyEditPage.createNewCompany();
     }
 }
