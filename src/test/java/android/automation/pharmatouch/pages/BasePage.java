@@ -61,23 +61,31 @@ abstract class BasePage {
     By yesOkPopupButton = By.id("add_to_visit");
     By noPopupButton = By.id("edit");
 
+    By editCompanyContactButton = By.id("button_edit");
+    By addCompanyContactVisit = By.id("button_add_to_visit");
+
+    By arrowBackButton = By.id("action_bar_image_button_back");
+
     By scrollViewDayWeek = By.id("drag_layer");
 
 
 
-    public void goToProfilePage() {
+    public ProfilePage goToProfilePage() {
         driver.findElement(profileButton).click();
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("imageArowForward")));
+        return new ProfilePage(driver);
     }
 
-    public void goToCompanyPage() {
+    public CompanyListPage goToCompanyPage() {
         driver.findElement(companyButton).click();
         wait.until(ExpectedConditions.presenceOfElementLocated(companyPageTitle));
+        return new CompanyListPage(driver);
     }
 
-    public void goToContactPage() {
+    public ContactListPage goToContactPage() {
         driver.findElement(contactButton).click();
         wait.until(ExpectedConditions.presenceOfElementLocated(contactPageTitle));
+        return new ContactListPage(driver);
     }
 
     public void goToReportPage() {
@@ -90,10 +98,10 @@ abstract class BasePage {
         wait.until(ExpectedConditions.presenceOfElementLocated(clmPageTitle));
     }
 
-    public void goToExitPage() {
+    public LoginPage goToExitPage() {
         findExitSyncLocators();
         driver.findElement(exitButton).click();
-        // todo шото там
+        return new LoginPage(driver);
     }
 
     public void sync() {
@@ -108,6 +116,7 @@ abstract class BasePage {
         exit = allMenuItems.size() - 1;
         sync = allMenuItems.size();
     }
+
     // выдача сообщения тоаста
     public String getToastMessage() {
         WebElement toastView = driver.findElement(By.xpath("//android.widget.Toast[1]"));
@@ -186,21 +195,6 @@ abstract class BasePage {
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
-
-
-    public void test() {
-        Dimension size = driver.findElement(scrollViewDayWeek).getSize();
-        int startX = size.width / 2;
-        int startY = size.height;
-        int endY = size.height / 3;
-        List<WebElement> elements1 = driver.findElements(By.xpath("//*[contains(@resource-id, 'event_color_bg')]"));
-        while (elements1.size() == 0)
-        { // TODO можно добавить быстрее/медленнее, в зависимости
-            new TouchAction(driver).press(startX, startY).waitAction(Duration.ofMillis(500)).
-                    moveTo(startX, endY).release().perform();
-            elements1 = driver.findElements(By.xpath("//*[contains(@resource-id, 'event_color_bg')]"));
-        }
-    }
 
 
     public void scrollPageUp() {

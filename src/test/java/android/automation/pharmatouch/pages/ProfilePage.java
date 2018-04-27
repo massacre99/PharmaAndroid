@@ -82,6 +82,24 @@ public class ProfilePage extends BasePage {
         return calendar.get(Calendar.DAY_OF_MONTH);
     }
 
+    public TaskActionEditPage openNewTaskActionEditPageFromPlusButton() {
+        driver.findElement(plusViewButton).click();
+        return new TaskActionEditPage(driver);
+    }
+
+    public TaskActionEditPage openNewTaskActionEditPageFromLongTapOnSchedule() {
+        WebElement schedule = driver.findElement(scrollViewDayWeek);
+        new TouchAction(driver).longPress(schedule, Duration.ofSeconds(2)).release().perform();
+        return new TaskActionEditPage(driver);
+    }
+
+    public TaskActionPage clickOnTask(WebElement task) {
+        task.click();
+        return new TaskActionPage(driver);
+    }
+
+
+
 
 
 
@@ -106,8 +124,9 @@ public class ProfilePage extends BasePage {
 
         clickCheckToday();
 
-
     }
+
+
 
     public void clickCheckToday() {
 
@@ -119,16 +138,55 @@ public class ProfilePage extends BasePage {
     }
 
     public void addNewTask() {
-        TaskActionEditPage task = openNewTaskActionEditPage();
+        TaskActionEditPage task = openNewTaskActionEditPageFromPlusButton();
         task.fillNewVisit();
     }
 
-    public TaskActionEditPage openNewTaskActionEditPage() {
-        driver.findElement(plusViewButton).click();
-        return new TaskActionEditPage(driver);
-    }
 
     public void swipeVisitAtWeek() {
+        driver.findElement(dayWeekMonthChoose).click();
+        driver.findElement(weekChoose).click();
+
+        scrollDownWhileFindTaskAtDay();
+
+        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(allTask));
+
+        List<WebElement> tasks = driver.findElements(getTaskTextLocators());
+
+        WebElement task = tasks.get(2);
+        String text = task.getText();
+
+        TaskActionPage currentTask = clickOnTask(task);
+
+        // берем строку дейтфром дейттилл таска до свайпа и после
+        String taskDate = currentTask.getTaskDatefromDatetillText();
+        String taskDate2 = new String();
+
+        driver.pressKeyCode(AndroidKeyCode.BACK);
+
+        tasks = driver.findElements(getTaskTextLocators());
+        task = tasks.get(2);
+
+        new TouchAction(driver).press(task).waitAction(Duration.ofSeconds(25))
+                .moveTo(350, 420).release().perform();
+
+        tasks = driver.findElements(getTaskTextLocators());
+
+        for (WebElement webElement : tasks) {
+            if (webElement.getText().equals(text)) {
+                TaskActionPage currentTask2 = clickOnTask(webElement);
+                taskDate2 = currentTask2.getTaskDatefromDatetillText();
+                driver.pressKeyCode(AndroidKeyCode.BACK); }
+        }
+
+        Assert.assertNotEquals(taskDate,taskDate2);
+        driver.findElement(dayWeekMonthChoose).click();
+        driver.findElement(dayChoose).click();
+        waitForVisible(profileButton);
+    }
+
+/*
+    public void swipeVisitAtWeekOld() {
         driver.findElement(dayWeekMonthChoose).click();
         driver.findElement(weekChoose).click();
 
@@ -170,6 +228,7 @@ public class ProfilePage extends BasePage {
         driver.findElement(dayChoose).click();
         waitForVisible(profileButton);
     }
+*/
 
     public void deleteRandomTask() {
 
@@ -178,10 +237,8 @@ public class ProfilePage extends BasePage {
         List<WebElement> tasks = driver.findElements(getTaskTextLocators());
         int count = getTaskCount();
         try {
-            tasks.get(0).click();
-            driver.findElement(deleteTaskButton).click();
-            waitForVisible(yesOkPopupButton);
-            driver.findElement(yesOkPopupButton).click();
+            TaskActionPage task = clickOnTask(tasks.get(0));
+            task.deleteTask();
 
             // works only on UIAutomator2, else comment. TODO toast
             Assert.assertEquals(Properties.text_message_remove_visit, getToastMessage());
@@ -220,9 +277,6 @@ public class ProfilePage extends BasePage {
     }
     */
 
-    public  void openCompanyPage() {
-
-    }
 
     public ProfilePage(AndroidDriver driver) {
         super(driver);

@@ -1,9 +1,6 @@
 package android.automation.pharmatouch.pages;
 
 import android.automation.pharmatouch.utils.Properties;
-import android.automation.pharmatouch.utils.logging.CompanyModel;
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidKeyCode;
 import org.openqa.selenium.By;
@@ -52,11 +49,9 @@ public class CompanyEditPage extends BasePage {
     By companyDropboxFieldText = By.id("layoutForInflateViews"); // тайтлы в дропбоксовых полях
 
 
-
-    By createCompanyButton = By.id("button_create_agensy");
-    By editCompanyButton = By.id("button_edit");
-    By addCompanyVisit = By.id("button_add_to_visit");
     By createCompanyOkPopupButton = By.id("add_to_visit");
+    By createCompanyButton = By.id("button_create_agensy");
+
 
     By createCompanyTitle = By.xpath(String.format("//*[contains(@resource-id, 'client_main_title_text') and @text='%s']",
             Properties.title_new_agensy));
@@ -88,6 +83,44 @@ public class CompanyEditPage extends BasePage {
     By companyConnectedPlace = By.id("prescrDinamicLayout");
 
 
+
+    public CompanyPage exitToCompanyPageWithArrowButton() {
+        driver.findElement(arrowBackButton).click();
+        waitForVisible(createCompanyOkPopupButton);
+        driver.findElement(createCompanyOkPopupButton).click();
+        return new CompanyPage(driver);
+    }
+
+    public CompanyPage exitToCompanyPageWithAndroidKey() {
+        driver.pressKeyCode(AndroidKeyCode.BACK);
+        waitForVisible(createCompanyOkPopupButton);
+        driver.findElement(createCompanyOkPopupButton).click();
+        return new CompanyPage(driver);
+    }
+
+    public CompanyPage clickSaveButtonToSaveCompany() {
+        driver.findElement(createCompanyButton).click();
+        return new CompanyPage(driver);
+    }
+
+    public CompanyListPage exitWhileCreateNewCompanyWithArrowButton() {
+        driver.findElement(arrowBackButton).click();
+        waitForVisible(createCompanyOkPopupButton);
+        driver.findElement(createCompanyOkPopupButton).click();
+        return new CompanyListPage(driver);
+    }
+
+    public CompanyListPage exitWhileCreateNewCompanyWithAndroidKey() {
+        driver.pressKeyCode(AndroidKeyCode.BACK);
+        waitForVisible(createCompanyOkPopupButton);
+        driver.findElement(createCompanyOkPopupButton).click();
+        return new CompanyListPage(driver);
+    }
+
+
+
+
+
     public void createNewCompany() {
 
         goToCompanyPage();
@@ -117,7 +150,7 @@ public class CompanyEditPage extends BasePage {
         // works only on UIAutomator2, else comment. TODO toast
         Assert.assertEquals(Properties.text_message_add_new_company, getToastMessage());
 
-        wait.until(ExpectedConditions.presenceOfElementLocated(editCompanyButton));
+        wait.until(ExpectedConditions.presenceOfElementLocated(editCompanyContactButton));
         exitToVisibleMenu();
     }
 

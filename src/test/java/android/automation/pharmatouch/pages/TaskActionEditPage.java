@@ -2,6 +2,7 @@ package android.automation.pharmatouch.pages;
 
 import android.automation.pharmatouch.utils.Properties;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidKeyCode;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
@@ -12,7 +13,7 @@ import org.testng.Assert;
 public class TaskActionEditPage extends BasePage {
 
     By createTaskActionButton = By.id("button_create_visit");
-    By createVisitOkPopupButton = By.id("add_to_visit");
+    By createTaskOkPopupButton = By.id("add_to_visit");
 
     By goToTaskPage = By.id("buttonToDay");
     By goToActionPage = By.id("buttonToWeek");
@@ -65,13 +66,58 @@ public class TaskActionEditPage extends BasePage {
 
 
 
+    public ProfilePage exitToProfilePageWithArrowButton() {
+        driver.findElement(arrowBackButton).click();
+        waitForVisible(createTaskOkPopupButton);
+        driver.findElement(createTaskOkPopupButton).click();
+        return new ProfilePage(driver);
+    }
 
+    public ProfilePage exitToProfilePageWithAndroidKey() {
+        driver.pressKeyCode(AndroidKeyCode.BACK);
+        waitForVisible(createTaskOkPopupButton);
+        driver.findElement(createTaskOkPopupButton).click();
+        return new ProfilePage(driver);
+    }
+
+    public ContactPage exitToContactPageWithArrowButton() {
+        driver.findElement(arrowBackButton).click();
+        waitForVisible(createTaskOkPopupButton);
+        driver.findElement(createTaskOkPopupButton).click();
+        return new ContactPage(driver);
+    }
+
+    public ContactPage exitToContactPageWithAndroidKey() {
+        driver.pressKeyCode(AndroidKeyCode.BACK);
+        waitForVisible(createTaskOkPopupButton);
+        driver.findElement(createTaskOkPopupButton).click();
+        return new ContactPage(driver);
+    }
+
+    public CompanyPage exitToCompanyPageWithArrowButton() {
+        driver.findElement(arrowBackButton).click();
+        waitForVisible(createTaskOkPopupButton);
+        driver.findElement(createTaskOkPopupButton).click();
+        return new CompanyPage(driver);
+    }
+
+    public CompanyPage exitToCompanyPageWithAndroidKey() {
+        driver.pressKeyCode(AndroidKeyCode.BACK);
+        waitForVisible(createTaskOkPopupButton);
+        driver.findElement(createTaskOkPopupButton).click();
+        return new CompanyPage(driver);
+    }
+
+    public TaskActionPage clickSaveButtonToSaveTask() {
+        driver.findElement(createTaskActionButton).click();
+        return new TaskActionPage(driver);
+    }
 
 
     public void fillNewVisit() {
         wait.until(ExpectedConditions.presenceOfElementLocated(createTaskTitle));
         driver.findElement(createTaskActionButton).click();
-        driver.findElement(createVisitOkPopupButton).click();
+        driver.findElement(createTaskOkPopupButton).click();
         driver.findElement(taskActionCompany).click();
         waitForVisible(By.id("header_title_text"));
         driver.findElement(getTextViewElement(2)).click();

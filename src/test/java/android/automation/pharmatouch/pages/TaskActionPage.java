@@ -21,10 +21,51 @@ public class TaskActionPage extends BasePage {
     By taskVisitType = By.xpath("//*[contains(@resource-id,'visitType')]//*[contains(@resource-id,'text_value')]");
     By taskCountyParty = By.xpath("//*[contains(@resource-id,'visitCountParty')]//*[contains(@resource-id,'text_value')]");
 
+    By editTaskButton = By.id("buttonEditVisit");
+    By deleteTaskButton = By.id("buttonDeleteVisit");
+    By yesOkPopupButton = By.id("add_to_visit");
+    By noPopupButton = By.id("edit");
+
+
+    public TaskActionEditPage clickEditButtonToEditTask() {
+        driver.findElement(editTaskButton).click();
+        return new TaskActionEditPage(driver);
+    }
+
+    public CompanyPage deleteTaskCreatedFromCompanyPage() {
+        driver.findElement(deleteTaskButton).click();
+        waitForVisible(yesOkPopupButton);
+        driver.findElement(yesOkPopupButton).click();
+        return new CompanyPage(driver);
+    }
+
+    public ContactPage deleteTaskCreatedFromContactPage() {
+        driver.findElement(deleteTaskButton).click();
+        waitForVisible(yesOkPopupButton);
+        driver.findElement(yesOkPopupButton).click();
+        return new ContactPage(driver);
+    }
+
+    public ProfilePage deleteTaskCreatedFromProfilePage() {
+        driver.findElement(deleteTaskButton).click();
+        waitForVisible(yesOkPopupButton);
+        driver.findElement(yesOkPopupButton).click();
+        return new ProfilePage(driver);
+    }
+
+
+
+
 
 
     public String getTaskDatefromDatetillText() {
         return driver.findElement(taskDatefromDatetill).getText();
+    }
+
+    public void deleteTask() {
+        driver.findElement(deleteTaskButton).click();
+        waitForVisible(yesOkPopupButton);
+        driver.findElement(yesOkPopupButton).click();
     }
 
 
